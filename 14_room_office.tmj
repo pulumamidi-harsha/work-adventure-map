@@ -927,6 +927,22 @@
                  "width":183.988248705329,
                  "x":-0.759221977591935,
                  "y":705.445650127623
+                }, 
+                {
+                 "height":18.84375,
+                 "id":5,
+                 "name":"",
+                 "rotation":269.683646150035,
+                 "text":
+                    {
+                     "text":"Room 12",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":65.8380560234982,
+                 "y":811.990956170321
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -935,7 +951,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":5,
+ "nextobjectid":7,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

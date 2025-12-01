@@ -973,7 +973,7 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":64,
+                 "height":144.071174377224,
                  "id":28,
                  "name":"to12RoomOffice",
                  "properties":[
@@ -990,7 +990,7 @@
                  "y":23.7210337535231
                 }, 
                 {
-                 "height":64,
+                 "height":110.439628482972,
                  "id":29,
                  "name":"to14RoomOffice",
                  "properties":[
@@ -1002,9 +1002,57 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":96,
-                 "x":1920,
-                 "y":1280
+                 "width":159.467492260062,
+                 "x":0.98919257725673,
+                 "y":717.016847423503
+                }, 
+                {
+                 "height":18.84375,
+                 "id":30,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "text":"Room 12",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":2584.43797264235,
+                 "y":88.442893683274
+                }, 
+                {
+                 "height":18.84375,
+                 "id":31,
+                 "name":"",
+                 "rotation":91.4405062779184,
+                 "text":
+                    {
+                     "text":"Office Room",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":3188.03778668822,
+                 "y":748.976422085073
+                }, 
+                {
+                 "height":18.84375,
+                 "id":33,
+                 "name":"",
+                 "rotation":269.107923275246,
+                 "text":
+                    {
+                     "text":"Room 14",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":62.4112836954727,
+                 "y":809.608859913771
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1306,14 +1354,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":14,
                      "text":"Product management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":216.262274314809,
-                 "x":1346.54180800415,
-                 "y":934.228690055566
+                 "x":1336.85078075526,
+                 "y":934.798750481971
                 }, 
                 {
                  "height":18.84375,
@@ -1323,14 +1372,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"Product Design",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":180.171530862315,
-                 "x":1660.40836181993,
-                 "y":934.228690055566
+                 "x":1629.05503836764,
+                 "y":937.078992187592
                 }, 
                 {
                  "height":18.84375,
@@ -1340,14 +1390,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"Autonomous UX builder",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":239.418251133157,
-                 "x":1339.46332953009,
-                 "y":454.569015976373
+                 "x":1338.89326910368,
+                 "y":456.849257681994
                 }, 
                 {
                  "height":18.84375,
@@ -1357,14 +1408,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"Security & Compliance",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":231.160643583952,
-                 "x":1633.89358127986,
-                 "y":454.569015976374
+                 "x":1630.47321872143,
+                 "y":455.709136829184
                 }, 
                 {
                  "height":18.84375,
@@ -1374,14 +1426,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":14,
                      "text":"Product experiance & IoT",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":237.318712452509,
-                 "x":1049.10055268972,
-                 "y":934.946656898749
+                 "x":1046.8203109841,
+                 "y":934.376596472344
                 }, 
                 {
                  "height":18.84375,
@@ -1391,14 +1444,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"UX Library",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":136.458224372385,
-                 "x":1099.94669950262,
-                 "y":454.594313465815
+                 "x":1073.15385946158,
+                 "y":455.734434318625
                 }, 
                 {
                  "height":18.84375,
@@ -1408,14 +1462,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"DSO-OS",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":139.073287133891,
-                 "x":817.215934298136,
-                 "y":453.851049133191
+                 "x":793.843456815523,
+                 "y":454.991169986001
                 }, 
                 {
                  "height":42.1192472492594,
@@ -1426,14 +1481,15 @@
                     {
                      "bold":true,
                      "halign":"center",
-                     "text":"Development Platforms & Tooling",
+                     "pixelsize":12,
+                     "text":"Dev Platforms & Tooling",
                      "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":254.300204787561,
-                 "x":762.082919622363,
+                 "x":710.20742081949,
                  "y":922.81571145958
                 }, 
                 {
@@ -1444,14 +1500,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":14,
                      "text":"Outcome Management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":243.241477003585,
-                 "x":481.692613376047,
-                 "y":455.286982819556
+                 "x":477.132129964805,
+                 "y":454.146861966746
                 }, 
                 {
                  "height":18.84375,
@@ -1461,14 +1518,15 @@
                  "text":
                     {
                      "bold":true,
+                     "pixelsize":12,
                      "text":"Planning Management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":225.435580794981,
-                 "x":196.059571600079,
-                 "y":455.274334074836
+                 "x":193.209269468053,
+                 "y":456.414454927646
                 }, 
                 {
                  "height":18.84375,
@@ -1499,7 +1557,7 @@
                  "type":"",
                  "visible":true,
                  "width":199.244599122844,
-                 "x":2555.56447124191,
+                 "x":2535.04229589132,
                  "y":912.707675237743
                 }, 
                 {
@@ -1525,7 +1583,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":30,
+ "nextobjectid":35,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
