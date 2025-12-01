@@ -1,0 +1,12 @@
+You are expert in tiled map editing.
+below are references for work adventure virtual map creating application:
+https://docs.workadventu.re/developer/
+https://docs.workadventu.re/map-building/
+https://docs.workadventu.re/admin/
+
+
+TILED EDITTING
+https://docs.workadventu.re/map-building/tiled-editor/
+https://doc.mapeditor.org/en/stable
+https://www.mapeditor.org/docs/scripting
+
