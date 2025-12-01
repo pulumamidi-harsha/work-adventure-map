@@ -969,6 +969,51 @@
         }, 
         {
          "draworder":"topdown",
+         "id":25,
+         "name":"roomNavigation",
+         "objects":[
+                {
+                 "height":64,
+                 "id":28,
+                 "name":"to12RoomOffice",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"12_room_office.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":125.773338455628,
+                 "x":2561.92092665545,
+                 "y":23.7210337535231
+                }, 
+                {
+                 "height":64,
+                 "id":29,
+                 "name":"to14RoomOffice",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"14_room_office.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96,
+                 "x":1920,
+                 "y":1280
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":24,
          "name":"websiteAreas",
          "objects":[
@@ -1260,12 +1305,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Product management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":161.345956323177,
+                 "width":216.262274314809,
                  "x":1346.54180800415,
                  "y":934.228690055566
                 }, 
@@ -1276,12 +1322,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Product Design",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":114.794961824658,
+                 "width":180.171530862315,
                  "x":1660.40836181993,
                  "y":934.228690055566
                 }, 
@@ -1292,12 +1339,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Autonomous UX builder",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":174.0416820955,
+                 "width":239.418251133157,
                  "x":1339.46332953009,
                  "y":454.569015976373
                 }, 
@@ -1308,12 +1356,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Security & Compliance",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":168.399137307801,
+                 "width":231.160643583952,
                  "x":1633.89358127986,
                  "y":454.569015976374
                 }, 
@@ -1324,12 +1373,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Product experiance & IoT",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":181.094863080124,
+                 "width":237.318712452509,
                  "x":1049.10055268972,
                  "y":934.946656898749
                 }, 
@@ -1340,12 +1390,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"UX Library",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":80.234375,
+                 "width":136.458224372385,
                  "x":1099.94669950262,
                  "y":454.594313465815
                 }, 
@@ -1356,12 +1407,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"DSO-OS",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":80.234375,
+                 "width":139.073287133891,
                  "x":817.215934298136,
                  "y":453.851049133191
                 }, 
@@ -1372,15 +1424,15 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "halign":"center",
-                     "pixelsize":11,
                      "text":"Development Platforms & Tooling",
                      "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":171.925727800113,
+                 "width":254.300204787561,
                  "x":762.082919622363,
                  "y":922.81571145958
                 }, 
@@ -1391,12 +1443,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Outcome Management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":162.17453139689,
+                 "width":243.241477003585,
                  "x":481.692613376047,
                  "y":455.286982819556
                 }, 
@@ -1407,12 +1460,13 @@
                  "rotation":0,
                  "text":
                     {
+                     "bold":true,
                      "text":"Planning Management",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":162.67407451883,
+                 "width":225.435580794981,
                  "x":196.059571600079,
                  "y":455.274334074836
                 }, 
@@ -1428,7 +1482,7 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":102.309489788483,
+                 "width":183.376435395177,
                  "x":2047.55061465273,
                  "y":909.641988019432
                 }, 
@@ -1444,7 +1498,7 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":116.870122135396,
+                 "width":199.244599122844,
                  "x":2555.56447124191,
                  "y":912.707675237743
                 }, 
@@ -1460,7 +1514,7 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":116.913566268563,
+                 "width":199.288043256011,
                  "x":342.777784766953,
                  "y":909.34713555645
                 }],
@@ -1470,8 +1524,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":25,
- "nextobjectid":28,
+ "nextlayerid":26,
+ "nextobjectid":30,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
