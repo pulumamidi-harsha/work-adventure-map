@@ -927,6 +927,23 @@
                  "width":130.848724853477,
                  "x":2557.37012066967,
                  "y":15.2642255394588
+                }, 
+                {
+                 "height":121.025186123871,
+                 "id":4,
+                 "name":"toOfficeRoom",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"office.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":148.273087280216,
+                 "x":3053.17243335777,
+                 "y":704.318557869571
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -935,7 +952,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":4,
+ "nextobjectid":5,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

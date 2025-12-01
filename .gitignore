@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .env.secret
 dist.zip
+
+# agent instruction file 
+agent-instructions.txt

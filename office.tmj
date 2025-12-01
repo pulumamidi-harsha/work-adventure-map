@@ -581,7 +581,7 @@
          "name":"exits",
          "objects":[
                 {
-                 "height":96,
+                 "height":43.8170116542007,
                  "id":16,
                  "name":"to10RoomOffice",
                  "properties":[
@@ -592,13 +592,13 @@
                         }],
                  "rotation":0,
                  "type":"area",
-                 "visible":true,
+                 "visible":false,
                  "width":64,
-                 "x":1568,
-                 "y":288
+                 "x":1376.6623760654,
+                 "y":-11.1824665159158
                 }, 
                 {
-                 "height":96,
+                 "height":66.4296399373804,
                  "id":17,
                  "name":"to12RoomOffice",
                  "properties":[
@@ -609,13 +609,13 @@
                         }],
                  "rotation":0,
                  "type":"area",
-                 "visible":true,
+                 "visible":false,
                  "width":64,
-                 "x":1568,
-                 "y":160
+                 "x":1576.6971647243,
+                 "y":126.95077404766
                 }, 
                 {
-                 "height":96,
+                 "height":66.4296399373804,
                  "id":18,
                  "name":"to14RoomOffice",
                  "properties":[
@@ -626,10 +626,58 @@
                         }],
                  "rotation":0,
                  "type":"area",
-                 "visible":true,
+                 "visible":false,
                  "width":64,
-                 "x":1568,
-                 "y":32
+                 "x":-34.017742216038,
+                 "y":157.239172029918
+                }, 
+                {
+                 "height":18.84375,
+                 "id":21,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "text":"Room 10",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":1377.10727653975,
+                 "y":-3.94701072366925
+                }, 
+                {
+                 "height":18.84375,
+                 "id":22,
+                 "name":"",
+                 "rotation":90.5880388770399,
+                 "text":
+                    {
+                     "text":"Room 12",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":1600.25942763234,
+                 "y":129.562203188637
+                }, 
+                {
+                 "height":18.84375,
+                 "id":23,
+                 "name":"",
+                 "rotation":270.571492121524,
+                 "text":
+                    {
+                     "text":"Room 14",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":0.771872922241082,
+                 "y":222.918240386071
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -638,7 +686,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":21,
+ "nextobjectid":24,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

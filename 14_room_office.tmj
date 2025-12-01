@@ -912,6 +912,23 @@
                  "y":-4.87612321926952
                 }, 
                 {
+                 "height":117.598774885145,
+                 "id":4,
+                 "name":"toOfficeRoom",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"office.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":141.94180704441,
+                 "x":3058.66221125113,
+                 "y":708.753279537239
+                }, 
+                {
                  "height":138.501479546616,
                  "id":3,
                  "name":"to12RoomOffice",
@@ -935,7 +952,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":4,
+ "nextobjectid":5,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
