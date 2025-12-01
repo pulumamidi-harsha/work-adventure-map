@@ -895,23 +895,6 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":79.3139356814701,
-                 "id":2,
-                 "name":"toGameRoom",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"games.tmj"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":141.94180704441,
-                 "x":2551.77094019447,
-                 "y":-4.87612321926952
-                }, 
-                {
                  "height":117.598774885145,
                  "id":4,
                  "name":"toOfficeRoom",
