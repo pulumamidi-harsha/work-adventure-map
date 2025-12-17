@@ -860,7 +860,201 @@
          "draworder":"topdown",
          "id":7,
          "name":"Text",
-         "objects":[],
+         "objects":[
+                {
+                 "height":18.84375,
+                 "id":43,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "text":"DevSec Tools",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":186.23,
+                 "x":1336.22,
+                 "y":935.911458333333
+                }, 
+                {
+                 "height":18.8438,
+                 "id":73,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"DSO Metrics",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":147.23,
+                 "x":1062.21333333333,
+                 "y":933.91
+                }, 
+                {
+                 "height":18.8438,
+                 "id":74,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"AI Native Engineering",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":147.23,
+                 "x":1626.385,
+                 "y":933.91
+                }, 
+                {
+                 "height":26.84,
+                 "id":75,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"DevX",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":147.23,
+                 "x":1922.385,
+                 "y":934.5781
+                }, 
+                {
+                 "height":26.84,
+                 "id":76,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"Product Experience",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":165.23,
+                 "x":195.718333333333,
+                 "y":453.246666666667
+                }, 
+                {
+                 "height":26.84,
+                 "id":77,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"IoT",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":147.23,
+                 "x":481.051666666667,
+                 "y":453.58
+                }, 
+                {
+                 "height":26.84,
+                 "id":78,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"UX Library",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":147.23,
+                 "x":767.718333333333,
+                 "y":454.58
+                }, 
+                {
+                 "height":26.84,
+                 "id":79,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "text":"Autonomous UX Builder",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":180.23,
+                 "x":1049.38,
+                 "y":453.246666666667
+                }, 
+                {
+                 "height":26.84,
+                 "id":81,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "text":"Azure Planning",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":197.23,
+                 "x":1623.71833333333,
+                 "y":454.246666666667
+                }, 
+                {
+                 "height":26.84,
+                 "id":82,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"Outcome Management",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":189.23,
+                 "x":1908.38,
+                 "y":454.58
+                }, 
+                {
+                 "height":26.84,
+                 "id":83,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "text":"Digital Product Journey",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":180.23,
+                 "x":1336.31,
+                 "y":454.87
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -871,7 +1065,41 @@
          "draworder":"topdown",
          "id":10,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":18.84375,
+                 "id":18,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "text":"Hello World",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":-230.783854166667,
+                 "y":371.911458333333
+                }, 
+                {
+                 "height":18.84375,
+                 "id":19,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":18,
+                     "text":"DSO OS",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":182.23,
+                 "x":760.55,
+                 "y":934.91
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1000,7 +1228,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":10,
+ "nextobjectid":84,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
