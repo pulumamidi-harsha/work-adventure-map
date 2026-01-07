@@ -324,7 +324,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"office.tmj#from-conference"
+                         "value":"maps/10_room_office.tmj#from-conference"
                         }],
                  "rotation":0,
                  "type":"area",

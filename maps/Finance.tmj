@@ -952,7 +952,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"office.tmj"
+                         "value":"10_room_office.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1013,6 +1013,7 @@
                  "rotation":0,
                  "text":
                     {
+                     "halign":"center",
                      "text":"Room 12",
                      "wrap":true
                     },
@@ -1029,6 +1030,7 @@
                  "rotation":91.4405062779184,
                  "text":
                     {
+                     "halign":"center",
                      "text":"Office Room",
                      "wrap":true
                     },
@@ -1045,6 +1047,7 @@
                  "rotation":269.107923275246,
                  "text":
                     {
+                     "halign":"center",
                      "text":"Room 14",
                      "wrap":true
                     },
@@ -1354,33 +1357,34 @@
                  "text":
                     {
                      "bold":true,
-                     "pixelsize":12,
-                     "text":"Process Automation",
+                     "halign":"center",
+                     "text":"Func. Perf. \/ Cost Reporting",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":136.458224372385,
-                 "x":1055.15,
-                 "y":455.734434318625
+                 "width":184,
+                 "x":1047.15,
+                 "y":935.5
                 }, 
                 {
-                 "height":18.84375,
+                 "height":34,
                  "id":20,
                  "name":"",
                  "rotation":0,
                  "text":
                     {
                      "bold":true,
+                     "halign":"center",
                      "pixelsize":12,
-                     "text":"Process Insights & Management",
+                     "text":"Tax Reporting & Transfer Pricing",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":194.07,
-                 "x":751.84,
-                 "y":456.99
+                 "width":190,
+                 "x":1323.84,
+                 "y":929.5
                 }, 
                 {
                  "height":18.84375,
@@ -1390,33 +1394,168 @@
                  "text":
                     {
                      "bold":true,
+                     "halign":"center",
                      "pixelsize":14,
-                     "text":"AI Enablement",
+                     "text":"Treasury",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":243.241477003585,
-                 "x":477.132129964805,
-                 "y":454.146861966746
+                 "width":160,
+                 "x":773.13,
+                 "y":935.5
                 }, 
                 {
-                 "height":18.84375,
+                 "height":24.84,
                  "id":23,
                  "name":"",
                  "rotation":0,
                  "text":
                     {
                      "bold":true,
-                     "pixelsize":12,
-                     "text":"Digital Interactions & Workflows",
+                     "halign":"center",
+                     "pixelsize":11,
+                     "text":"Financial\/Payments & Bank Accounting",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":225.435580794981,
-                 "x":180.21,
-                 "y":456.414454927646
+                 "width":190,
+                 "x":1620.21,
+                 "y":933.5
+                }, 
+                {
+                 "height":28.84,
+                 "id":36,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":11,
+                     "text":"Financial Process Automation & AI",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":190,
+                 "x":1619.35592873234,
+                 "y":451.799741961909
+                }, 
+                {
+                 "height":23.5146426377227,
+                 "id":37,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":12,
+                     "text":"Group Close & Consolidation",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":190,
+                 "x":1331.00860126971,
+                 "y":449.598402621339
+                }, 
+                {
+                 "height":16,
+                 "id":38,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":12,
+                     "text":"Business Performance Mgmt",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":190,
+                 "x":1041.28261314766,
+                 "y":458.598402621339
+                }, 
+                {
+                 "height":18.8438,
+                 "id":39,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":14,
+                     "text":"Production Accounting",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":186.213393405693,
+                 "x":766.692607003891,
+                 "y":454.55516328077
+                }, 
+                {
+                 "height":18.8438,
+                 "id":40,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "pixelsize":14,
+                     "text":"Financial Planning",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":175.728036043416,
+                 "x":475.723940200696,
+                 "y":454.55516328077
+                }, 
+                {
+                 "height":34,
+                 "id":41,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":12,
+                     "text":"Value Flow & Revenue Accounting",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":190,
+                 "x":172.376612738071,
+                 "y":449.598402621339
+                }, 
+                {
+                 "height":23.5146,
+                 "id":43,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":12,
+                     "text":"Working Capital Cash Flow",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":190,
+                 "x":2003,
+                 "y":912.2427
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1425,7 +1564,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":36,
+ "nextobjectid":44,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

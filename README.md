@@ -4,7 +4,7 @@
 <a href="https://x.com/workadventure_" target="blank"><img src="https://img.shields.io/twitter/follow/workadventure_.svg?style=social" /></a>
 ![visitors](https://vbr.nathanchung.dev/badge?page_id=workadventure.map-starter-kit&color=00cf00)
 
-![office map thumbnail](./office.png)
+![WorkAdventure map overview](./map-overview.png)
 
 🗺️ This is a starter kit to help you build your own map for [WorkAdventure](https://workadventu.re).
 
@@ -29,7 +29,7 @@ We recommend following this file structure:
 - *`tilesets/`*: All PNG tilesets
 
 > [!TIP]
-> - If you want to use more than one map file, just add the new map file in the root folder (we recommend creating a copy of *office.tmj* and editing it to avoid any mistakes).
+> - If you want to use more than one map file, just add the new map file in the maps folder (we recommend creating a copy of *10_room_office.tmj* and editing it to avoid any mistakes).
 > - We recommend using **512x512** images for the map thumbnails.
 > - If you are going to create custom websites to embed in the map, please reference the HTML files in the `input` option in *vite.config.js*.
 
@@ -79,7 +79,7 @@ Read [the documentation](https://docs.workadventu.re/map-building/tiled-editor/p
 This project contains multiple licenses as follows:
 
 * [Code license](./LICENSE.code) *(all files except those for other licenses)*
-* [Map license](./LICENSE.map) *(`office.tmj` and the map visual as well)*
+* [Map license](./LICENSE.map) *(`10_room_office.tmj` and the map visual as well)*
 * [Assets license](./LICENSE.assets) *(the files inside the `tilesets/` folder)*
 
 > [!IMPORTANT]
