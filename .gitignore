@@ -17,11 +17,11 @@ build/
 
 # Package manager lock files (keep one, comment others)
 # npm
-package-lock.json
+# package-lock.json
 # yarn
 yarn.lock
 # pnpm
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 # Logs
 npm-debug.log*
