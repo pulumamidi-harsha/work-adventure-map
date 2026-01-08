@@ -517,6 +517,14 @@
             right: -28px;
         }
 
+        /* Environment Links */
+        .env-link:hover {
+            color: var(--success-green) !important;
+            text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+
         .copy-buttons {
             display: flex;
             gap: 0.5rem;
@@ -697,11 +705,37 @@
             <div class="instructions-content">
                 <div>
                     <div class="instruction-step">
-                        <h3>� Step 1: Access Map Storage UI</h3>
-                        <p>Navigate to your WorkAdventure Map Storage interface at:<br>
-                        <strong style="color: var(--bayer-blue); font-family: monospace;">
-                        https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/
-                        </strong></p>
+                        <h3>🌐 Step 1: Access Map Storage UI</h3>
+                        <p>Navigate to your WorkAdventure Map Storage interface:</p>
+                        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div>
+                                <strong style="color: var(--success-green);">Dev Environment:</strong><br>
+                                <a href="https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                            <div>
+                                <strong style="color: #FFA500;">Staging Environment:</strong><br>
+                                <a href="https://workadventure.staging.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.staging.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                            <div>
+                                <strong style="color: #FF6B6B;">Production Environment:</strong><br>
+                                <a href="https://workadventure.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="instruction-step" style="margin-top: 1rem;">
                         <h3>➕ Step 2: Click "Add a new map"</h3>
@@ -760,7 +794,7 @@
                         <strong style="color: var(--bayer-light-green);">💡 Pro Tip:</strong> Make sure your map files are publicly accessible via GitHub Pages. 
                         The workflow automatically publishes your maps when you push changes to the master branch.
                         <br><br>
-                        <strong style="color: var(--bayer-blue);">🔗 Map Storage URL:</strong> All maps are hosted at<br>
+                        <strong style="color: var(--primary-blue);">🔗 Map Storage URL:</strong> All maps are hosted at<br>
                         <code style="background: var(--dark-bg); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">
                         https://pulumamidi-harsha.github.io/work-adventure-map/maps/
                         </code>
@@ -900,7 +934,7 @@
                     <button class="copy-btn" onclick="copyToClipboard('${map.url}', this)">
                         📋 Copy Full URL
                     </button>
-                    <button class="copy-btn" onclick="copyToClipboard('${map.filename}', this)">
+                    <button class="copy-btn" onclick="copyToClipboard('${map.filename.replace('.tmj', '.wam')}', this)">
                         📄 Copy Filename
                     </button>
                 </div>
