@@ -12,6 +12,25 @@
 
 👨🏻‍🔧 If you have any questions, feel free to ask in the [WorkAdventure office](https://play.staging.workadventu.re/@/tcm/workadventure/wa-village).
 
+## 🎨 Maps Catalog (NEW!)
+
+This repository includes a **dynamic, visually stunning Maps Catalog** that automatically displays all your WorkAdventure maps! 
+
+### ✨ Features:
+- 🔄 **Auto-Discovery**: Automatically finds all `.tmj` files from your repository
+- 📋 **One-Click Copy**: Copy map URLs directly to add them to WorkAdventure
+- 🔍 **Search & Filter**: Quickly find maps by name or category
+- 📱 **Responsive Design**: Beautiful on desktop, tablet, and mobile
+- 📊 **Live Stats**: Real-time map count and updates
+- 📖 **Built-in Instructions**: Step-by-step guide for adding maps
+
+### 🌐 Access Your Catalog:
+Once deployed, visit: **https://pulumamidi-harsha.github.io/work-adventure-map/**
+
+The catalog page is automatically deployed with your maps whenever you push changes to the master branch.
+
+👉 [Learn more about the Maps Catalog](./MAPS_CATALOG.md)
+
 ## 🚀 Upload your map
 
 In the `.env` file, you can set your upload strategy to `GH_PAGES` (default) or `MAP_STORAGE`. Simply comment out the option you don't want to use.

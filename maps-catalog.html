@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSO-OS Maps Catalog | Bayer WorkAdventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Modern Color Palette - Professional & Clean */
+            --primary-blue: #00A3E0;       /* Vibrant Blue */
+            --accent-cyan: #00D4FF;        /* Bright Cyan */
+            --success-green: #00E676;      /* Modern Green */
+            --deep-blue: #0A1929;          /* Deep Navy */
+            --dark-slate: #1A2332;         /* Dark Slate */
+            --medium-slate: #2D3748;       /* Medium Slate */
+            
+            /* Theme Colors */
+            --primary-color: #00A3E0;
+            --secondary-color: #00D4FF;
+            --success-color: #00E676;
+            --dark-bg: #0A1929;
+            --card-bg: #1A2332;
+            --card-hover: #2D3748;
+            --text-primary: #ffffff;
+            --text-secondary: #94A3B8;
+            --border-color: rgba(0, 163, 224, 0.2);
+            --accent-gradient: linear-gradient(135deg, #00A3E0 0%, #00D4FF 100%);
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0e27;
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ultra-modern animated mesh gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 163, 224, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 25%),
+                radial-gradient(circle at 50% 20%, rgba(0, 230, 118, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 90% 40%, rgba(0, 163, 224, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 30% 90%, rgba(0, 212, 255, 0.1) 0%, transparent 25%);
+            animation: meshMove 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        @keyframes meshMove {
+            0%, 100% { 
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            33% { 
+                transform: translate(10%, -10%) rotate(5deg) scale(1.1);
+            }
+            66% { 
+                transform: translate(-10%, 10%) rotate(-5deg) scale(0.9);
+            }
+        }
+
+        /* Floating particles */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(0, 212, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle, rgba(0, 163, 224, 0.2) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px;
+            background-position: 0 0, 40px 40px;
+            animation: particleFloat 60s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        @keyframes particleFloat {
+            from { background-position: 0 0, 40px 40px; }
+            to { background-position: 50px 50px, 90px 90px; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ultra-modern Header with Neumorphism */
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: rgba(26, 35, 50, 0.6);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 32px;
+            margin-bottom: 3rem;
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 163, 224, 0.2),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            animation: headerFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes headerFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Animated shine effect */
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.05) 50%,
+                transparent 70%
+            );
+            animation: headerShine 8s infinite;
+        }
+
+        @keyframes headerShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        /* Bayer Logo - Modern */
+        .bayer-logo {
+            width: 160px;
+            height: auto;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 4px 16px rgba(0, 163, 224, 0.4));
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 4px 16px rgba(0, 163, 224, 0.4)); }
+            50% { filter: drop-shadow(0 6px 24px rgba(0, 212, 255, 0.6)); }
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, #00D4FF 50%, #00A3E0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            animation: titlePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        header p {
+            font-size: 1.35rem;
+            opacity: 0.95;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* Instructions Section */
+        .instructions {
+            background: rgba(26, 35, 50, 0.5);
+            backdrop-filter: blur(16px) saturate(180%);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .instructions h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+        }
+
+        .instructions-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 968px) {
+            .instructions-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .instruction-step {
+            background: var(--dark-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .instruction-step h3 {
+            color: var(--bayer-light-green);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .instruction-step p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .instruction-screenshot {
+            background: var(--dark-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .instruction-screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Search and Filter */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1.25rem 1.75rem;
+            background: rgba(26, 35, 50, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: rgba(0, 212, 255, 0.6);
+            background: rgba(26, 35, 50, 0.8);
+            box-shadow: 
+                0 0 0 4px rgba(0, 163, 224, 0.2),
+                0 8px 24px rgba(0, 163, 224, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .sort-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 1rem 1.75rem;
+            background: rgba(26, 35, 50, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 14px;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: rgba(0, 163, 224, 0.3);
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 163, 224, 0.3);
+        }
+
+        .btn.active {
+            background: linear-gradient(135deg, #00A3E0 0%, #00D4FF 100%);
+            border-color: transparent;
+            box-shadow: 0 8px 24px rgba(0, 163, 224, 0.4);
+        }
+
+        /* Maps Grid */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .map-card {
+            background: rgba(26, 35, 50, 0.5);
+            backdrop-filter: blur(16px) saturate(180%);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 4px 24px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .map-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .map-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><circle cx="15" cy="15" r="10" fill="none" stroke="%2300D4FF" stroke-width="1.5" opacity="0.2"/><line x1="15" y1="8" x2="15" y2="22" stroke="%2300D4FF" stroke-width="1.5" opacity="0.2"/><line x1="8" y1="15" x2="22" y2="15" stroke="%2300D4FF" stroke-width="1.5" opacity="0.2"/></svg>') no-repeat center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .map-card:hover::after {
+            opacity: 1;
+        }
+
+        .map-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 
+                0 24px 48px rgba(0, 163, 224, 0.3),
+                0 0 80px rgba(0, 212, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.6);
+            background: rgba(26, 35, 50, 0.7);
+        }
+
+        .map-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .map-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 163, 224, 0.3);
+        }
+
+        .map-info {
+            flex: 1;
+        }
+
+        .map-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .map-filename {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+        }
+
+        .map-url {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin: 1.25rem 0;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 0.875rem;
+            word-break: break-all;
+            position: relative;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        /* Clickable URL Link */
+        .map-url-link {
+            color: #00A3E0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline;
+            position: relative;
+            background: linear-gradient(135deg, #00A3E0 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .map-url-link:hover {
+            color: #00E676;
+            text-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
+            -webkit-text-fill-color: #00E676;
+        }
+
+        .map-url-link::after {
+            content: '🔗';
+            position: absolute;
+            right: -24px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .map-url-link:hover::after {
+            opacity: 1;
+            right: -28px;
+        }
+
+        /* Environment Links */
+        .env-link:hover {
+            color: var(--success-green) !important;
+            text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+
+        .copy-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .copy-btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 163, 224, 0.3);
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 163, 224, 0.4);
+        }
+
+        .copy-btn.copied {
+            background: var(--success-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-gradient);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0, 163, 224, 0.3);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 2px dashed var(--border-color);
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--success-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateY(200%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+
+        /* Grid overlay pattern for depth */
+        .container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .search-box {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Bayer Logo -->
+            <img class="bayer-logo" src="bayer-logo.svg" alt="Bayer Logo" />
+            
+            <h1>🗺️ DSO-OS Virtual Office Maps</h1>
+            <p>Browse and integrate maps for your Virtual Office</p>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalMaps">0</div>
+                    <div class="stat-label">Total Maps</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="lastUpdated">Just Now</div>
+                    <div class="stat-label">Last Updated</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h2>📖 How to Add Maps to WorkAdventure</h2>
+            <div class="instructions-content">
+                <div>
+                    <div class="instruction-step">
+                        <h3>🌐 Step 1: Access Map Storage UI</h3>
+                        <p>Navigate to your WorkAdventure Map Storage interface:</p>
+                        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div>
+                                <strong style="color: var(--success-green);">Dev Environment:</strong><br>
+                                <a href="https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                            <div>
+                                <strong style="color: #FFA500;">Staging Environment:</strong><br>
+                                <a href="https://workadventure.staging.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.staging.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                            <div>
+                                <strong style="color: #FF6B6B;">Production Environment:</strong><br>
+                                <a href="https://workadventure.dso-os.int.bayer.com/map-storage/ui/" 
+                                   target="_blank" 
+                                   class="env-link"
+                                   style="color: var(--primary-blue); font-family: 'JetBrains Mono', monospace; text-decoration: none; transition: all 0.3s ease;">
+                                   https://workadventure.dso-os.int.bayer.com/map-storage/ui/
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction-step" style="margin-top: 1rem;">
+                        <h3>➕ Step 2: Click "Add a new map"</h3>
+                        <p>In the Map Storage UI, locate and click the "Add a new map" button. This will create a new room (WAM file) in the map-storage referencing your Tiled map.</p>
+                    </div>
+                    <div class="instruction-step" style="margin-top: 1rem;">
+                        <h3>📋 Step 3: Fill in the Details</h3>
+                        <p><strong>WAM path:</strong> Enter a unique name for your room (e.g., <code>my-map.wam</code>)<br>
+                        <strong>Tile map URL:</strong> Copy and paste the full URL from the map cards below (must be .tmj or .json extension)</p>
+                    </div>
+                    <div class="instruction-step" style="margin-top: 1rem;">
+                        <h3>✅ Step 4: Add & Verify</h3>
+                        <p>Click the "Add" button to create your map. Your map will be instantly available in your WorkAdventure virtual office!</p>
+                    </div>
+                </div>
+                <div class="instruction-screenshot">
+                    <h3 style="color: var(--bayer-light-green); margin-bottom: 1rem;">📸 WorkAdventure "Add a new map" Interface</h3>
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+                            <!-- Background -->
+                            <rect fill="#f8f9fa" width="600" height="400" rx="8"/>
+                            
+                            <!-- Header -->
+                            <text x="40" y="60" font-family="Arial" font-size="32" font-weight="bold" fill="#000">Add a new map</text>
+                            
+                            <!-- Description text -->
+                            <text x="40" y="100" font-family="Arial" font-size="14" fill="#666">This will create a new room (WAM file) in the map-storage referencing your Tiled map.</text>
+                            
+                            <!-- Info text -->
+                            <text x="40" y="140" font-family="Arial" font-size="13" fill="#444">Please provide the full URL to a Tiled map file (.tmj or .json extension)</text>
+                            
+                            <!-- WAM path label -->
+                            <text x="40" y="180" font-family="Arial" font-size="14" font-weight="bold" fill="#000">WAM path:</text>
+                            
+                            <!-- WAM path input -->
+                            <rect x="160" y="162" width="400" height="32" fill="white" stroke="#4a9eff" stroke-width="2" rx="4"/>
+                            <text x="170" y="184" font-family="monospace" font-size="13" fill="#999">my-map.wam</text>
+                            
+                            <!-- Tile map URL label -->
+                            <text x="40" y="240" font-family="Arial" font-size="14" font-weight="bold" fill="#000">Tile map URL:</text>
+                            
+                            <!-- Tile map URL input -->
+                            <rect x="40" y="252" width="520" height="32" fill="white" stroke="#ccc" stroke-width="1" rx="4"/>
+                            <text x="50" y="274" font-family="monospace" font-size="11" fill="#999">https://pulumamidi-harsha.github.io/work-adventure-map/maps/...</text>
+                            
+                            <!-- Add button -->
+                            <rect x="40" y="320" width="80" height="40" fill="#e0e0e0" stroke="#999" stroke-width="1" rx="4"/>
+                            <text x="80" y="346" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Add</text>
+                            
+                            <!-- Close button -->
+                            <rect x="135" y="320" width="80" height="40" fill="#e0e0e0" stroke="#999" stroke-width="1" rx="4"/>
+                            <text x="175" y="346" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Close</text>
+                        </svg>
+                    </div>
+                    <p style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.875rem; line-height: 1.8;">
+                        <strong style="color: var(--bayer-light-green);">💡 Pro Tip:</strong> Make sure your map files are publicly accessible via GitHub Pages. 
+                        The workflow automatically publishes your maps when you push changes to the master branch.
+                        <br><br>
+                        <strong style="color: var(--primary-blue);">🔗 Map Storage URL:</strong> All maps are hosted at<br>
+                        <code style="background: var(--dark-bg); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">
+                        https://pulumamidi-harsha.github.io/work-adventure-map/maps/
+                        </code>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search and Controls -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search maps by name or filename...">
+            </div>
+            <div class="sort-buttons">
+                <button class="btn active" data-sort="name">A-Z</button>
+                <button class="btn" data-sort="name-desc">Z-A</button>
+                <button class="btn" data-sort="date">Latest</button>
+            </div>
+        </div>
+
+        <!-- Maps Grid -->
+        <div id="mapsContainer">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading maps from GitHub Pages...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🚀 Built with ❤️ by the <strong style="color: var(--primary-blue);">Bayer DSO-OS Team</strong></p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+            Repository: <a href="https://github.com/pulumamidi-harsha/work-adventure-map" target="_blank" style="color: var(--primary-blue); text-decoration: none;">pulumamidi-harsha/work-adventure-map</a>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+            Map Storage: <span style="color: var(--success-green);">workadventure.dev.dso-os.int.bayer.com</span>
+        </p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span>✓</span>
+        <span id="toastMessage">Copied to clipboard!</span>
+    </div>
+
+    <script>
+        // Configuration - UPDATE THESE VALUES
+        const GITHUB_USERNAME = 'pulumamidi-harsha';
+        const GITHUB_REPO = 'work-adventure-map';
+        const MAPS_DIRECTORY = 'maps';
+        const BASE_URL = `https://${GITHUB_USERNAME}.github.io/${GITHUB_REPO}/${MAPS_DIRECTORY}`;
+
+        let allMaps = [];
+        let currentSort = 'name';
+
+        // Fetch maps from GitHub API
+        async function fetchMaps() {
+            try {
+                const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${MAPS_DIRECTORY}`;
+                const response = await fetch(apiUrl);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch maps');
+                }
+
+                const files = await response.json();
+                
+                // Filter only .tmj files
+                allMaps = files
+                    .filter(file => file.name.endsWith('.tmj'))
+                    .map(file => ({
+                        name: file.name.replace('.tmj', ''),
+                        filename: file.name,
+                        url: `${BASE_URL}/${file.name}`,
+                        size: file.size,
+                        sha: file.sha
+                    }));
+
+                updateStats();
+                displayMaps(allMaps);
+            } catch (error) {
+                console.error('Error fetching maps:', error);
+                showEmptyState('Failed to load maps. Please check your configuration.');
+            }
+        }
+
+        // Update statistics
+        function updateStats() {
+            document.getElementById('totalMaps').textContent = allMaps.length;
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+        }
+
+        // Display maps in grid
+        function displayMaps(maps) {
+            const container = document.getElementById('mapsContainer');
+            
+            if (maps.length === 0) {
+                showEmptyState('No maps found matching your search.');
+                return;
+            }
+
+            const grid = document.createElement('div');
+            grid.className = 'maps-grid';
+
+            maps.forEach(map => {
+                const card = createMapCard(map);
+                grid.appendChild(card);
+            });
+
+            container.innerHTML = '';
+            container.appendChild(grid);
+        }
+
+        // Create map card element
+        function createMapCard(map) {
+            const card = document.createElement('div');
+            card.className = 'map-card';
+            card.setAttribute('data-name', map.name.toLowerCase());
+
+            // Generate a unique icon emoji based on map name
+            const icon = getMapIcon(map.name);
+
+            card.innerHTML = `
+                <div class="map-header">
+                    <div class="map-icon">${icon}</div>
+                    <div class="map-info">
+                        <div class="map-name">${formatMapName(map.name)}</div>
+                        <div class="map-filename">${map.filename}</div>
+                    </div>
+                </div>
+                <div class="map-url">
+                    <a href="${map.url}" target="_blank" rel="noopener noreferrer" class="map-url-link" title="Open map in new tab">
+                        ${map.url}
+                    </a>
+                </div>
+                <div class="copy-buttons">
+                    <button class="copy-btn" onclick="copyToClipboard('${map.url}', this)">
+                        📋 Copy Full URL
+                    </button>
+                    <button class="copy-btn" onclick="copyToClipboard('${map.filename.replace('.tmj', '.wam')}', this)">
+                        📄 Copy Filename
+                    </button>
+                </div>
+                <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span class="badge">✨ Ready to Use</span>
+                    <span style="font-size: 0.75rem; color: var(--text-secondary);">${formatFileSize(map.size)}</span>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Format map name for display
+        function formatMapName(name) {
+            // Convert underscores and handle special cases
+            return name
+                .replace(/_/g, ' ')
+                .replace(/&/g, ' & ')
+                .replace(/([a-z])([A-Z])/g, '$1 $2')
+                .replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        // Get appropriate icon for map
+        function getMapIcon(name) {
+            const icons = {
+                'office': '🏢',
+                'cyber': '🔐',
+                'security': '🛡️',
+                'defense': '🛡️',
+                'finance': '💰',
+                'data': '📊',
+                'analytics': '📈',
+                'platform': '⚙️',
+                'infra': '🏗️',
+                'lab': '🔬',
+                'product': '📦',
+                'customer': '👥',
+                'employee': '👔',
+                'digital': '💻',
+                'enterprise': '🏛️',
+                'global': '🌍',
+                'integration': '🔗',
+                'pipeline': '🔄',
+                'operation': '⚡',
+                'enablement': '🚀',
+                'regulatory': '📋',
+                'fulfill': '✅',
+                'manufacturing': '🏭',
+                'logistics': '🚚',
+                'workplace': '🏢'
+            };
+
+            const lowerName = name.toLowerCase();
+            for (const [key, icon] of Object.entries(icons)) {
+                if (lowerName.includes(key)) {
+                    return icon;
+                }
+            }
+
+            // Default icon
+            return '🗺️';
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        // Copy to clipboard
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`Copied: ${text.split('/').pop()}`);
+                
+                // Visual feedback
+                const originalText = button.innerHTML;
+                button.innerHTML = '✓ Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                showToast('Failed to copy. Please try again.', 'error');
+            });
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            
+            toastMessage.textContent = message;
+            toast.className = 'toast show';
+            
+            if (type === 'error') {
+                toast.style.background = 'var(--danger-color)';
+            } else {
+                toast.style.background = 'var(--success-color)';
+            }
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Show empty state
+        function showEmptyState(message) {
+            const container = document.getElementById('mapsContainer');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">🗺️</div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">No Maps Found</h3>
+                    <p style="color: var(--text-secondary);">${message}</p>
+                </div>
+            `;
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredMaps = allMaps.filter(map => 
+                map.name.toLowerCase().includes(searchTerm) || 
+                map.filename.toLowerCase().includes(searchTerm)
+            );
+            displayMaps(sortMaps(filteredMaps, currentSort));
+        });
+
+        // Sort functionality
+        document.querySelectorAll('[data-sort]').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('[data-sort]').forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+                currentSort = button.getAttribute('data-sort');
+                
+                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                const filteredMaps = allMaps.filter(map => 
+                    map.name.toLowerCase().includes(searchTerm) || 
+                    map.filename.toLowerCase().includes(searchTerm)
+                );
+                
+                displayMaps(sortMaps(filteredMaps, currentSort));
+            });
+        });
+
+        // Sort maps
+        function sortMaps(maps, sortType) {
+            const sorted = [...maps];
+            
+            switch (sortType) {
+                case 'name':
+                    return sorted.sort((a, b) => a.name.localeCompare(b.name));
+                case 'name-desc':
+                    return sorted.sort((a, b) => b.name.localeCompare(a.name));
+                case 'date':
+                    return sorted.reverse(); // Assuming API returns newest first
+                default:
+                    return sorted;
+            }
+        }
+
+        // Initialize
+        fetchMaps();
+
+        // Auto-refresh every 5 minutes
+        setInterval(fetchMaps, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

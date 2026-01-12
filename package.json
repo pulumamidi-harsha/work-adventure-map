@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run copy-catalog && npm run copy-logo",
+    "copy-catalog": "cp maps-catalog.html dist/index.html",
+    "copy-logo": "cp bayer-logo.svg dist/bayer-logo.svg",
     "prod": "vite preview",
     "upload": "npm run build && upload-wa-map",
     "upload-only": "upload-wa-map"
