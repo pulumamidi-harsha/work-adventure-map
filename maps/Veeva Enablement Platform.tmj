@@ -963,7 +963,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"PH Customer Engagement Platform.tmj"
+                         "value":"PH Customer Engagement Platform(Data Foundation & Visualization).tmj"
                         }],
                  "rotation":0,
                  "type":"area",
