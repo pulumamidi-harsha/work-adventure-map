@@ -1123,106 +1123,72 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":141.61761444638,
-                 "id":2,
-                 "name":"to10RoomOffice",
+                 "height":117.598774885145,
+                 "id":84,
+                 "name":"toCSCustomerExperiencePlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"10_room_office.tmj"
+                         "value":"CS Customer Experience Platform(Business Capabilities Unit).tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":200.546174560431,
-                 "x":-8.43127036196924,
-                 "y":700.717402477459
+                 "width":128.845302174147,
+                 "x":2554.93165261521,
+                 "y":37.6033396087419
                 }, 
                 {
-                 "height":140.033581498495,
-                 "id":3,
-                 "name":"to14RoomOffice",
+                 "height":117.598774885145,
+                 "id":85,
+                 "name":"toCSGlobalDataAssetsAnalyticsPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"14_room_office.tmj"
+                         "value":"CS Global Data Assets & Analytics Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":130.848724853477,
-                 "x":2557.37012066967,
-                 "y":15.2642255394588
+                 "width":141.94180704441,
+                 "x":3.59875583203711,
+                 "y":700.286486044037
                 }, 
                 {
-                 "height":121.025186123871,
-                 "id":4,
-                 "name":"toOfficeRoom",
+                 "height":117.598774885145,
+                 "id":86,
+                 "name":"toCSProductPipelinePlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"10_room_office.tmj"
+                         "value":"CS Product Pipeline Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":148.273087280216,
-                 "x":3053.17243335777,
-                 "y":704.318557869571
+                 "width":141.94180704441,
+                 "x":2857.26446754522,
+                 "y":1475.59957436359
                 }, 
                 {
-                 "height":18.84375,
-                 "id":5,
-                 "name":"",
+                 "height":117.598774885145,
+                 "id":87,
+                 "name":"toManufacturingEnablementPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"Manufacturing Enablement Platform.tmj"
+                        }],
                  "rotation":0,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 14",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":2581.4573412502,
-                 "y":93.5402666125456
-                }, 
-                {
-                 "height":18.84375,
-                 "id":6,
-                 "name":"",
-                 "rotation":85.6012946450047,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Office room",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":3174.38317067487,
-                 "y":727.534333156366
-                }, 
-                {
-                 "height":18.84375,
-                 "id":8,
-                 "name":"",
-                 "rotation":271.707179715057,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 10",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":33.7400784573562,
-                 "y":811.242734723214
+                 "width":141.94180704441,
+                 "x":3053.33969059507,
+                 "y":708.144388966195
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1231,7 +1197,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":84,
+ "nextobjectid":88,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

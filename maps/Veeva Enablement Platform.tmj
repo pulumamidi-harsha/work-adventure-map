@@ -943,24 +943,7 @@
          "draworder":"topdown",
          "id":23,
          "name":"exits",
-         "objects":[
-                {
-                 "height":128,
-                 "id":1,
-                 "name":"backToMainOffice",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"10_room_office.tmj"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":144.919690175295,
-                 "x":3049.55399855061,
-                 "y":705.517283856055
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -973,89 +956,72 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":144.071174377224,
-                 "id":28,
-                 "name":"to12RoomOffice",
+                 "height":100,
+                 "id":42,
+                 "name":"toPHCustomerEngagement",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"12_room_office.tmj"
+                         "value":"PH Customer Engagement Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":125.773338455628,
-                 "x":2561.92092665545,
-                 "y":23.7210337535231
+                 "width":100,
+                 "x":100,
+                 "y":50
                 }, 
                 {
-                 "height":110.439628482972,
-                 "id":29,
-                 "name":"to14RoomOffice",
+                 "height":100,
+                 "id":43,
+                 "name":"toCSProductPipeline",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"14_room_office.tmj"
+                         "value":"CS Product Pipeline Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":159.467492260062,
-                 "x":0.98919257725673,
-                 "y":717.016847423503
+                 "width":100,
+                 "x":250,
+                 "y":50
                 }, 
                 {
-                 "height":18.84375,
-                 "id":30,
-                 "name":"",
+                 "height":100,
+                 "id":44,
+                 "name":"toCHProductExperience",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"CH Product Experience Platform.tmj"
+                        }],
                  "rotation":0,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 12",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":2584.43797264235,
-                 "y":88.442893683274
+                 "width":100,
+                 "x":400,
+                 "y":50
                 }, 
                 {
-                 "height":18.84375,
-                 "id":31,
-                 "name":"",
-                 "rotation":91.4405062779184,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Office Room",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "height":100,
+                 "id":45,
+                 "name":"toPHRegulatoryCompliance",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"PH Regulatory Compliance Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":3188.03778668822,
-                 "y":748.976422085073
-                }, 
-                {
-                 "height":18.84375,
-                 "id":33,
-                 "name":"",
-                 "rotation":269.107923275246,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 14",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":62.4112836954727,
-                 "y":809.608859913771
+                 "width":100,
+                 "x":550,
+                 "y":50
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1432,7 +1398,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":42,
+ "nextobjectid":46,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

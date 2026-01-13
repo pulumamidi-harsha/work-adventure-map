@@ -943,24 +943,7 @@
          "draworder":"topdown",
          "id":23,
          "name":"exits",
-         "objects":[
-                {
-                 "height":128,
-                 "id":1,
-                 "name":"backToMainOffice",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"10_room_office.tmj"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":144.919690175295,
-                 "x":3049.55399855061,
-                 "y":705.517283856055
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -973,89 +956,72 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":144.071174377224,
-                 "id":28,
-                 "name":"to12RoomOffice",
+                 "height":117.598774885145,
+                 "id":36,
+                 "name":"toEnterpriseDataAnalyticsPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"12_room_office.tmj"
+                         "value":"Enterprise Data & Analytics Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":125.773338455628,
-                 "x":2561.92092665545,
-                 "y":23.7210337535231
+                 "width":128.845302174147,
+                 "x":2554.93165261521,
+                 "y":37.6033396087419
                 }, 
                 {
-                 "height":110.439628482972,
-                 "id":29,
-                 "name":"to14RoomOffice",
+                 "height":117.598774885145,
+                 "id":37,
+                 "name":"toCHDataAssetsAnalyticsAIPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"14_room_office.tmj"
+                         "value":"CH Data Assets, Analytics, and AI Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":159.467492260062,
-                 "x":0.98919257725673,
-                 "y":717.016847423503
+                 "width":141.94180704441,
+                 "x":3.59875583203711,
+                 "y":700.286486044037
                 }, 
                 {
-                 "height":18.84375,
-                 "id":30,
-                 "name":"",
+                 "height":117.598774885145,
+                 "id":38,
+                 "name":"toCSGlobalDataAssetsAnalyticsPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"CS Global Data Assets & Analytics Platform.tmj"
+                        }],
                  "rotation":0,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 12",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":2584.43797264235,
-                 "y":88.442893683274
+                 "width":141.94180704441,
+                 "x":2857.26446754522,
+                 "y":1475.59957436359
                 }, 
                 {
-                 "height":18.84375,
-                 "id":31,
-                 "name":"",
-                 "rotation":91.4405062779184,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Office Room",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "height":117.598774885145,
+                 "id":39,
+                 "name":"toPHDecisionScienceAIPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"PH Decision Science & AI Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":3188.03778668822,
-                 "y":748.976422085073
-                }, 
-                {
-                 "height":18.84375,
-                 "id":33,
-                 "name":"",
-                 "rotation":269.107923275246,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 14",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":62.4112836954727,
-                 "y":809.608859913771
+                 "width":141.94180704441,
+                 "x":3053.33969059507,
+                 "y":700.286486044037
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1430,7 +1396,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":36,
+ "nextobjectid":40,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
@@ -1439,7 +1405,7 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"../tilesets\/Decoration.png",
+         "image":"..\/tilesets\/Decoration.png",
          "imageheight":256,
          "imagewidth":384,
          "margin":0,
@@ -1452,7 +1418,7 @@
         {
          "columns":10,
          "firstgid":97,
-         "image":"../tilesets\/Misc.png",
+         "image":"..\/tilesets\/Misc.png",
          "imageheight":352,
          "imagewidth":320,
          "margin":0,
@@ -1465,7 +1431,7 @@
         {
          "columns":12,
          "firstgid":207,
-         "image":"../tilesets\/Other_Furniture.png",
+         "image":"..\/tilesets\/Other_Furniture.png",
          "imageheight":416,
          "imagewidth":384,
          "margin":0,
@@ -1478,7 +1444,7 @@
         {
          "columns":25,
          "firstgid":363,
-         "image":"../tilesets\/Room_Builder.png",
+         "image":"..\/tilesets\/Room_Builder.png",
          "imageheight":1280,
          "imagewidth":800,
          "margin":0,
@@ -1491,7 +1457,7 @@
         {
          "columns":13,
          "firstgid":1363,
-         "image":"../tilesets\/Seats.png",
+         "image":"..\/tilesets\/Seats.png",
          "imageheight":448,
          "imagewidth":416,
          "margin":0,
@@ -1504,7 +1470,7 @@
         {
          "columns":10,
          "firstgid":1545,
-         "image":"../tilesets\/Tables.png",
+         "image":"..\/tilesets\/Tables.png",
          "imageheight":864,
          "imagewidth":320,
          "margin":0,
@@ -1517,7 +1483,7 @@
         {
          "columns":25,
          "firstgid":1815,
-         "image":"../tilesets\/Exterior.png",
+         "image":"..\/tilesets\/Exterior.png",
          "imageheight":1088,
          "imagewidth":800,
          "margin":0,
@@ -1530,7 +1496,7 @@
         {
          "columns":17,
          "firstgid":2665,
-         "image":"../tilesets\/Room_Builder_free_32x32.png",
+         "image":"..\/tilesets\/Room_Builder_free_32x32.png",
          "imageheight":736,
          "imagewidth":544,
          "margin":0,
@@ -1543,7 +1509,7 @@
         {
          "columns":13,
          "firstgid":3056,
-         "image":"../tilesets\/User_Zones.png",
+         "image":"..\/tilesets\/User_Zones.png",
          "imageheight":672,
          "imagewidth":416,
          "margin":0,
@@ -1556,7 +1522,7 @@
         {
          "columns":6,
          "firstgid":3329,
-         "image":"../tilesets\/Special_Zones.png",
+         "image":"..\/tilesets\/Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,

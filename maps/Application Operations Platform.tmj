@@ -943,24 +943,7 @@
          "draworder":"topdown",
          "id":23,
          "name":"exits",
-         "objects":[
-                {
-                 "height":128,
-                 "id":1,
-                 "name":"backToMainOffice",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"10_room_office.tmj"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":144.919690175295,
-                 "x":3049.55399855061,
-                 "y":705.517283856055
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -973,89 +956,72 @@
          "name":"roomNavigation",
          "objects":[
                 {
-                 "height":144.071174377224,
-                 "id":28,
-                 "name":"to12RoomOffice",
+                 "height":117.598774885145,
+                 "id":37,
+                 "name":"toDigitalWorkplacePlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"12_room_office.tmj"
+                         "value":"Digital Workplace Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":125.773338455628,
-                 "x":2561.92092665545,
-                 "y":23.7210337535231
+                 "width":128.845302174147,
+                 "x":2554.93165261521,
+                 "y":37.6033396087419
                 }, 
                 {
-                 "height":110.439628482972,
-                 "id":29,
-                 "name":"to14RoomOffice",
+                 "height":117.598774885145,
+                 "id":38,
+                 "name":"toInfrastructurePlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"14_room_office.tmj"
+                         "value":"Infrastructure Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":159.467492260062,
-                 "x":0.98919257725673,
-                 "y":717.016847423503
+                 "width":141.94180704441,
+                 "x":3.59875583203711,
+                 "y":700.286486044037
                 }, 
                 {
-                 "height":18.84375,
-                 "id":30,
-                 "name":"",
+                 "height":117.598774885145,
+                 "id":39,
+                 "name":"toIntegrationPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"Integration Platform.tmj"
+                        }],
                  "rotation":0,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 12",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":2584.43797264235,
-                 "y":88.442893683274
+                 "width":141.94180704441,
+                 "x":2857.26446754522,
+                 "y":1475.59957436359
                 }, 
                 {
-                 "height":18.84375,
-                 "id":31,
-                 "name":"",
-                 "rotation":91.4405062779184,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Office Room",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "height":117.598774885145,
+                 "id":40,
+                 "name":"toCyberSecurityTechnologiesPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"Cyber Security Technologies Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":3188.03778668822,
-                 "y":748.976422085073
-                }, 
-                {
-                 "height":18.84375,
-                 "id":33,
-                 "name":"",
-                 "rotation":269.107923275246,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 14",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":62.4112836954727,
-                 "y":809.608859913771
+                 "width":141.94180704441,
+                 "x":3053.33969059507,
+                 "y":708.144388966195
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1451,7 +1417,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":37,
+ "nextobjectid":41,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

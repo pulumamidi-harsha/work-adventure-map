@@ -1238,54 +1238,71 @@
          "objects":[
                 {
                  "height":117.598774885145,
-                 "id":4,
-                 "name":"toOfficeRoom",
+                 "id":11,
+                 "name":"toIntegratedPlanningLogisticsPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"10_room_office.tmj"
+                         "value":"Integrated Planning & Logistics Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":128.845302174147,
+                 "x":2554.93165261521,
+                 "y":37.6033396087419
+                }, 
+                {
+                 "height":117.598774885145,
+                 "id":12,
+                 "name":"toCHProductExperiencePlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"CH Product Experience Platform.tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":141.94180704441,
-                 "x":3058.66221125113,
-                 "y":708.753279537239
+                 "x":3.59875583203711,
+                 "y":700.286486044037
                 }, 
                 {
-                 "height":138.501479546616,
-                 "id":3,
-                 "name":"to12RoomOffice",
+                 "height":117.598774885145,
+                 "id":13,
+                 "name":"toCSProductFulfillmentPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"12_room_office.tmj"
+                         "value":"CS Product Fulfillment Platform.tmj"
                         }],
-                 "rotation":359.355405153542,
+                 "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":183.988248705329,
-                 "x":-0.759221977591935,
-                 "y":705.445650127623
+                 "width":141.94180704441,
+                 "x":2857.26446754522,
+                 "y":1475.59957436359
                 }, 
                 {
-                 "height":18.84375,
-                 "id":5,
-                 "name":"",
-                 "rotation":269.683646150035,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 12",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "height":117.598774885145,
+                 "id":14,
+                 "name":"toPHRegulatoryCompliancePlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"PH Regulatory Compliance Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":65.8380560234982,
-                 "y":811.990956170321
+                 "width":141.94180704441,
+                 "x":3053.33969059507,
+                 "y":708.144388966195
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1294,7 +1311,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":11,
+ "nextobjectid":15,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

@@ -1343,54 +1343,71 @@
          "objects":[
                 {
                  "height":117.598774885145,
-                 "id":4,
-                 "name":"toOfficeRoom",
+                 "id":17,
+                 "name":"toCSCustomerExperiencePlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"10_room_office.tmj"
+                         "value":"CS Customer Experience Platform(Business Capabilities Unit).tmj"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":141.94180704441,
-                 "x":3058.66221125113,
-                 "y":708.753279537239
+                 "x":2554.93165261521,
+                 "y":37.6033396087419
                 }, 
                 {
-                 "height":138.501479546616,
-                 "id":3,
-                 "name":"to12RoomOffice",
+                 "height":117.598774885145,
+                 "id":18,
+                 "name":"toCSProductFulfillmentPlatform",
                  "properties":[
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"12_room_office.tmj"
+                         "value":"CS Product Fulfillment Platform.tmj"
                         }],
-                 "rotation":359.355405153542,
+                 "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":183.988248705329,
-                 "x":-0.759221977591935,
-                 "y":705.445650127623
+                 "width":141.94180704441,
+                 "x":3.59875583203711,
+                 "y":700.286486044037
                 }, 
                 {
-                 "height":18.84375,
-                 "id":5,
-                 "name":"",
-                 "rotation":269.683646150035,
-                 "text":
-                    {
-                     "halign":"center",
-                     "text":"Room 12",
-                     "wrap":true
-                    },
-                 "type":"",
+                 "height":117.598774885145,
+                 "id":19,
+                 "name":"toCSProductPipelinePlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"CS Product Pipeline Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
                  "visible":true,
-                 "width":80.234375,
-                 "x":65.8380560234982,
-                 "y":811.990956170321
+                 "width":141.94180704441,
+                 "x":2857.26446754522,
+                 "y":1475.59957436359
+                }, 
+                {
+                 "height":117.598774885145,
+                 "id":20,
+                 "name":"toEnterpriseDataAnalyticsPlatform",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"Enterprise Data & Analytics Platform.tmj"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":141.94180704441,
+                 "x":3053.33969059507,
+                 "y":708.144388966195
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1399,7 +1416,7 @@
          "y":0
         }],
  "nextlayerid":22,
- "nextobjectid":17,
+ "nextobjectid":21,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
@@ -1408,7 +1425,7 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"../tilesets\/Decoration.png",
+         "image":"..\/tilesets\/Decoration.png",
          "imageheight":256,
          "imagewidth":384,
          "margin":0,
@@ -1421,7 +1438,7 @@
         {
          "columns":10,
          "firstgid":97,
-         "image":"../tilesets\/Misc.png",
+         "image":"..\/tilesets\/Misc.png",
          "imageheight":352,
          "imagewidth":320,
          "margin":0,
@@ -1434,7 +1451,7 @@
         {
          "columns":12,
          "firstgid":207,
-         "image":"../tilesets\/Other_Furniture.png",
+         "image":"..\/tilesets\/Other_Furniture.png",
          "imageheight":416,
          "imagewidth":384,
          "margin":0,
@@ -1447,7 +1464,7 @@
         {
          "columns":25,
          "firstgid":363,
-         "image":"../tilesets\/Room_Builder.png",
+         "image":"..\/tilesets\/Room_Builder.png",
          "imageheight":1280,
          "imagewidth":800,
          "margin":0,
@@ -1460,7 +1477,7 @@
         {
          "columns":13,
          "firstgid":1363,
-         "image":"../tilesets\/Seats.png",
+         "image":"..\/tilesets\/Seats.png",
          "imageheight":448,
          "imagewidth":416,
          "margin":0,
@@ -1473,7 +1490,7 @@
         {
          "columns":10,
          "firstgid":1545,
-         "image":"../tilesets\/Tables.png",
+         "image":"..\/tilesets\/Tables.png",
          "imageheight":864,
          "imagewidth":320,
          "margin":0,
@@ -1486,7 +1503,7 @@
         {
          "columns":25,
          "firstgid":1815,
-         "image":"../tilesets\/Exterior.png",
+         "image":"..\/tilesets\/Exterior.png",
          "imageheight":1088,
          "imagewidth":800,
          "margin":0,
@@ -1499,7 +1516,7 @@
         {
          "columns":17,
          "firstgid":2665,
-         "image":"../tilesets\/Room_Builder_free_32x32.png",
+         "image":"..\/tilesets\/Room_Builder_free_32x32.png",
          "imageheight":736,
          "imagewidth":544,
          "margin":0,
@@ -1512,7 +1529,7 @@
         {
          "columns":13,
          "firstgid":3056,
-         "image":"../tilesets\/User_Zones.png",
+         "image":"..\/tilesets\/User_Zones.png",
          "imageheight":672,
          "imagewidth":416,
          "margin":0,
@@ -1525,7 +1542,7 @@
         {
          "columns":6,
          "firstgid":3329,
-         "image":"../tilesets\/Special_Zones.png",
+         "image":"..\/tilesets\/Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
