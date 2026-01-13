@@ -1,0 +1,453 @@
+name: Sync Maps to WorkAdventure
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'maps/**/*.tmj'      # Trigger on any .tmj file changes
+      - 'maps/**/*.json'     # Trigger on any .json file changes
+  workflow_dispatch:           # Allow manual trigger from GitHub UI
+
+env:
+  GITHUB_PAGES_BASE_URL: https://pulumamidi-harsha.github.io/work-adventure-map/maps
+  MAPSTORAGE_USER: admin
+  MAPSTORAGE_PASSWORD: admin123
+
+jobs:
+  discover-maps:
+    name: Discover Maps
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.find-maps.outputs.maps }}
+      map-count: ${{ steps.find-maps.outputs.count }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Find all map files
+        id: find-maps
+        run: |
+          cd maps
+          # Find all .tmj files and create JSON array
+          MAPS_JSON=$(find . -name "*.tmj" -type f -exec basename {} \; | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          MAP_COUNT=$(echo "$MAPS_JSON" | jq 'length')
+          
+          echo "maps=$MAPS_JSON" >> $GITHUB_OUTPUT
+          echo "count=$MAP_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "Found $MAP_COUNT maps:"
+          echo "$MAPS_JSON" | jq -r '.[]'
+
+  sync-to-dev:
+    name: Sync to Dev Environment
+    runs-on: ubuntu-latest
+    needs: discover-maps
+    if: needs.discover-maps.outputs.map-count > 0
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Wait for GitHub Pages Deployment
+        run: |
+          echo "⏳ Waiting 5 minutes for GitHub Pages to fully deploy..."
+          echo "This ensures all maps are published before syncing to MapStorage"
+          sleep 300
+      
+      - name: Sync maps to Dev
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
+        run: |
+          #!/bin/bash
+          set -e
+          
+          MAPSTORAGE_API_URL="https://workadventure.dev.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "🚀 WorkAdventure Map Sync - DEV"
+          echo "========================================="
+          echo "Environment: Dev"
+          echo "MapStorage URL: $MAPSTORAGE_API_URL"
+          echo ""
+          
+          # Get existing maps
+          echo "📋 Fetching existing maps..."
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps" || echo '{"maps":{}}')
+          EXISTING_COUNT=$(echo "$EXISTING_MAPS" | jq '.maps | length')
+          echo "Found $EXISTING_COUNT existing maps in MapStorage"
+          echo ""
+          
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          # Process each map
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              # Generate WAM filename (sanitize)
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              
+              echo "📍 Processing: $MAP_FILE"
+              echo "   → WAM: $WAM_NAME"
+              
+              # Check if map already exists
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "   ⏭️  SKIP: Already exists in MapStorage"
+                  SKIP_COUNT=$((SKIP_COUNT + 1))
+              else
+                  # Create WAM file content
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  # Upload to MapStorage
+                  HTTP_CODE=$(curl -s -o /tmp/response.txt -w "%{http_code}" \
+                      -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME")
+                  
+                  RESPONSE=$(cat /tmp/response.txt)
+                  
+                  if [ "$HTTP_CODE" = "200" ] || echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "   ✅ SUCCESS: Map added to MapStorage"
+                      SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                  else
+                      echo "   ❌ ERROR: HTTP $HTTP_CODE - $RESPONSE"
+                      ERROR_COUNT=$((ERROR_COUNT + 1))
+                  fi
+              fi
+              echo ""
+          done
+          
+          # Final summary would be in the loop, but we need to save counts
+          echo "SUCCESS_COUNT=$SUCCESS_COUNT" >> $GITHUB_ENV
+          echo "SKIP_COUNT=$SKIP_COUNT" >> $GITHUB_ENV
+          echo "ERROR_COUNT=$ERROR_COUNT" >> $GITHUB_ENV
+      
+      - name: Dev Sync Summary
+        run: |
+          echo "========================================="
+          echo "✨ Dev Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: ${SUCCESS_COUNT:-0}"
+          echo "⏭️  Skipped (existing): ${SKIP_COUNT:-0}"
+          echo "❌ Errors: ${ERROR_COUNT:-0}"
+          echo "📊 Total maps: ${{ needs.discover-maps.outputs.map-count }}"
+          echo ""
+          echo "🔗 View maps at:"
+          echo "   https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/maps"
+
+  sync-to-staging:
+    name: Sync to Staging Environment
+    runs-on: ubuntu-latest
+    needs: [discover-maps, sync-to-dev]
+    if: needs.discover-maps.outputs.map-count > 0
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Sync maps to Staging
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
+        run: |
+          #!/bin/bash
+          set -e
+          
+          MAPSTORAGE_API_URL="https://workadventure.staging.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "🚀 WorkAdventure Map Sync - STAGING"
+          echo "========================================="
+          echo "Environment: Staging"
+          echo "MapStorage URL: $MAPSTORAGE_API_URL"
+          echo ""
+          
+          # Get existing maps
+          echo "📋 Fetching existing maps..."
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps" || echo '{"maps":{}}')
+          EXISTING_COUNT=$(echo "$EXISTING_MAPS" | jq '.maps | length')
+          echo "Found $EXISTING_COUNT existing maps in MapStorage"
+          echo ""
+          
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          # Process each map
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              # Generate WAM filename (sanitize)
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              
+              echo "📍 Processing: $MAP_FILE"
+              echo "   → WAM: $WAM_NAME"
+              
+              # Check if map already exists
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "   ⏭️  SKIP: Already exists in MapStorage"
+                  SKIP_COUNT=$((SKIP_COUNT + 1))
+              else
+                  # Create WAM file content
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  # Upload to MapStorage
+                  HTTP_CODE=$(curl -s -o /tmp/response.txt -w "%{http_code}" \
+                      -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME")
+                  
+                  RESPONSE=$(cat /tmp/response.txt)
+                  
+                  if [ "$HTTP_CODE" = "200" ] || echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "   ✅ SUCCESS: Map added to MapStorage"
+                      SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                  else
+                      echo "   ❌ ERROR: HTTP $HTTP_CODE - $RESPONSE"
+                      ERROR_COUNT=$((ERROR_COUNT + 1))
+                  fi
+              fi
+              echo ""
+          done
+          
+          echo "SUCCESS_COUNT=$SUCCESS_COUNT" >> $GITHUB_ENV
+          echo "SKIP_COUNT=$SKIP_COUNT" >> $GITHUB_ENV
+          echo "ERROR_COUNT=$ERROR_COUNT" >> $GITHUB_ENV
+      
+      - name: Staging Sync Summary
+        run: |
+          echo "========================================="
+          echo "✨ Staging Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: ${SUCCESS_COUNT:-0}"
+          echo "⏭️  Skipped (existing): ${SKIP_COUNT:-0}"
+          echo "❌ Errors: ${ERROR_COUNT:-0}"
+          echo "📊 Total maps: ${{ needs.discover-maps.outputs.map-count }}"
+          echo ""
+          echo "🔗 View maps at:"
+          echo "   https://workadventure.staging.dso-os.int.bayer.com/map-storage/ui/maps"
+
+  notify-completion:
+    name: Notify Completion
+    runs-on: ubuntu-latest
+    needs: [discover-maps, sync-to-dev, sync-to-staging]
+    if: always()
+    
+    steps:
+      - name: Summary
+        run: |
+          echo "========================================="
+          echo "🎉 WorkAdventure Map Sync Complete"
+          echo "========================================="
+          echo "Total maps discovered: ${{ needs.discover-maps.outputs.map-count }}"
+          echo ""
+          echo "Dev Status: ${{ needs.sync-to-dev.result }}"
+          echo "Staging Status: ${{ needs.sync-to-staging.result }}"
+          echo ""
+          echo "All maps are now available in both environments!"
+
+    name: Sync Maps to Dev Environment
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Wait for GitHub Pages deployment
+        run: |
+          echo "Waiting 30 seconds for GitHub Pages to update..."
+          sleep 30
+      
+      - name: Sync maps to Dev
+        env:
+          MAPSTORAGE_USER: admin
+          MAPSTORAGE_PASSWORD: admin123
+          ENVIRONMENT: dev
+        run: |
+          #!/bin/bash
+          set -e
+          
+          GITHUB_PAGES_BASE_URL="https://pulumamidi-harsha.github.io/work-adventure-map/maps"
+          MAPSTORAGE_API_URL="https://workadventure.dev.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "WorkAdventure Map Sync - DEV"
+          echo "========================================="
+          
+          # Get all .tmj files from maps directory
+          cd maps
+          mapfile -t MAPS < <(find . -name "*.tmj" -type f -exec basename {} \;)
+          
+          echo "Found ${#MAPS[@]} maps to sync"
+          echo ""
+          
+          # Get existing maps
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps")
+          
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          for MAP_FILE in "${MAPS[@]}"; do
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              
+              echo "Processing: $MAP_FILE → $WAM_NAME"
+              
+              # Check if map already exists
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "  ⏭️  SKIP: Already exists"
+                  ((SKIP_COUNT++))
+              else
+                  # Create WAM content
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  # Upload to MapStorage
+                  RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME" \
+                      2>&1)
+                  
+                  if echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "  ✅ SUCCESS"
+                      ((SUCCESS_COUNT++))
+                  else
+                      echo "  ❌ ERROR: $RESPONSE"
+                      ((ERROR_COUNT++))
+                  fi
+              fi
+          done
+          
+          echo ""
+          echo "========================================="
+          echo "Dev Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: $SUCCESS_COUNT"
+          echo "⏭️  Skipped: $SKIP_COUNT"
+          echo "❌ Errors: $ERROR_COUNT"
+
+  sync-to-staging:
+    name: Sync Maps to Staging Environment
+    runs-on: ubuntu-latest
+    needs: sync-to-dev  # Run after dev sync completes
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Sync maps to Staging
+        env:
+          MAPSTORAGE_USER: admin
+          MAPSTORAGE_PASSWORD: admin123
+          ENVIRONMENT: staging
+        run: |
+          #!/bin/bash
+          set -e
+          
+          GITHUB_PAGES_BASE_URL="https://pulumamidi-harsha.github.io/work-adventure-map/maps"
+          MAPSTORAGE_API_URL="https://workadventure.staging.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "WorkAdventure Map Sync - STAGING"
+          echo "========================================="
+          
+          # Get all .tmj files from maps directory
+          cd maps
+          mapfile -t MAPS < <(find . -name "*.tmj" -type f -exec basename {} \;)
+          
+          echo "Found ${#MAPS[@]} maps to sync"
+          echo ""
+          
+          # Get existing maps
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps")
+          
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          for MAP_FILE in "${MAPS[@]}"; do
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              
+              echo "Processing: $MAP_FILE → $WAM_NAME"
+              
+              # Check if map already exists
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "  ⏭️  SKIP: Already exists"
+                  ((SKIP_COUNT++))
+              else
+                  # Create WAM content
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  # Upload to MapStorage
+                  RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME" \
+                      2>&1)
+                  
+                  if echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "  ✅ SUCCESS"
+                      ((SUCCESS_COUNT++))
+                  else
+                      echo "  ❌ ERROR: $RESPONSE"
+                      ((ERROR_COUNT++))
+                  fi
+              fi
+          done
+          
+          echo ""
+          echo "========================================="
+          echo "Staging Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: $SUCCESS_COUNT"
+          echo "⏭️  Skipped: $SKIP_COUNT"
+          echo "❌ Errors: $ERROR_COUNT"
