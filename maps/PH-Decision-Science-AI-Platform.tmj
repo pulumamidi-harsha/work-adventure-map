@@ -1,10 +1,10 @@
 {
- "compressionlevel": -1,
- "height": 50,
- "infinite": false,
- "layers": [
+ "compressionlevel":-1,
+ "height":50,
+ "infinite":false,
+ "layers":[
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -5006,18 +5006,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 1,
-   "name": "start",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": false,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":1,
+   "name":"start",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":false,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     2444,
     2465,
     2465,
@@ -10019,18 +10019,18 @@
     2444,
     2444
    ],
-   "height": 50,
-   "id": 11,
-   "name": "outside",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":11,
+   "name":"outside",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -15032,18 +15032,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 2,
-   "name": "floors",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":2,
+   "name":"floors",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -20045,18 +20045,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 16,
-   "name": "back wall",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":16,
+   "name":"back wall",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -25058,18 +25058,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 20,
-   "name": "stairs",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":20,
+   "name":"stairs",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -30071,18 +30071,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 3,
-   "name": "walls",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":3,
+   "name":"walls",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -35084,18 +35084,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 15,
-   "name": "windows",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":15,
+   "name":"windows",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     1893,
@@ -40097,18 +40097,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 12,
-   "name": "trees",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":12,
+   "name":"trees",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -45110,18 +45110,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 4,
-   "name": "furniture",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":4,
+   "name":"furniture",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -50123,18 +50123,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 17,
-   "name": "seats",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":17,
+   "name":"seats",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -55136,18 +55136,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 6,
-   "name": "decor",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":6,
+   "name":"decor",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -60149,18 +60149,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 19,
-   "name": "seats front",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":19,
+   "name":"seats front",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -65162,18 +65162,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 5,
-   "name": "tech",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":5,
+   "name":"tech",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -70175,18 +70175,18 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 8,
-   "name": "zones",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": true,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":8,
+   "name":"zones",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "data": [
+   "data":[
     0,
     0,
     0,
@@ -75188,589 +75188,661 @@
     0,
     0
    ],
-   "height": 50,
-   "id": 9,
-   "name": "collides",
-   "opacity": 1,
-   "type": "tilelayer",
-   "visible": false,
-   "width": 100,
-   "x": 0,
-   "y": 0
+   "height":50,
+   "id":9,
+   "name":"collides",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":false,
+   "width":100,
+   "x":0,
+   "y":0
   },
   {
-   "draworder": "topdown",
-   "id": 7,
-   "name": "Text",
-   "objects": [],
-   "opacity": 1,
-   "type": "objectgroup",
-   "visible": true,
-   "x": 0,
-   "y": 0
+   "draworder":"topdown",
+   "id":7,
+   "name":"Text",
+   "objects":[],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
   },
   {
-   "draworder": "topdown",
-   "id": 10,
-   "name": "floorLayer",
-   "objects": [],
-   "opacity": 1,
-   "type": "objectgroup",
-   "visible": true,
-   "x": 0,
-   "y": 0
+   "draworder":"topdown",
+   "id":10,
+   "name":"floorLayer",
+   "objects":[],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
   },
   {
-   "draworder": "topdown",
-   "id": 23,
-   "name": "exits",
-   "objects": [],
-   "opacity": 1,
-   "type": "objectgroup",
-   "visible": true,
-   "x": 0,
-   "y": 0
+   "draworder":"topdown",
+   "id":23,
+   "name":"exits",
+   "objects":[],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
   },
   {
-   "draworder": "topdown",
-   "id": 25,
-   "name": "roomNavigation",
-   "objects": [
+   "draworder":"topdown",
+   "id":25,
+   "name":"roomNavigation",
+   "objects":[
     {
-     "height": 100,
-     "id": 34,
-     "name": "toPHCustomerEngagement",
-     "properties": [
+     "height":100,
+     "id":34,
+     "name":"toPHCustomerEngagement",
+     "properties":[
       {
-       "name": "exitUrl",
-       "type": "string",
-    "value": "PH-Customer-Engagement-Platform-Data-Privacy-Management.tmj"
+       "name":"exitUrl",
+       "type":"string",
+       "value":"PH-Customer-Engagement-Platform-Data-Privacy-Management.tmj"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": true,
-     "width": 100,
-     "x": 100,
-     "y": 50
+     "rotation":0,
+     "type":"area",
+     "visible":true,
+     "width":100,
+     "x":100,
+     "y":50
     },
     {
-     "height": 100,
-     "id": 36,
-     "name": "toPHDrugInnovation",
-     "properties": [
+     "height":100,
+     "id":36,
+     "name":"toPHDrugInnovation",
+     "properties":[
       {
-       "name": "exitUrl",
-       "type": "string",
-       "value": "PH-Drug-Innovation-Platform.tmj"
+       "name":"exitUrl",
+       "type":"string",
+       "value":"PH-Drug-Innovation-Platform.tmj"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": true,
-     "width": 100,
-     "x": 250,
-     "y": 50
+     "rotation":0,
+     "type":"area",
+     "visible":true,
+     "width":100,
+     "x":250,
+     "y":50
     },
     {
-     "height": 100,
-     "id": 39,
-     "name": "toPHRegulatoryCompliance",
-     "properties": [
+     "height":100,
+     "id":39,
+     "name":"toPHRegulatoryCompliance",
+     "properties":[
       {
-       "name": "exitUrl",
-       "type": "string",
-       "value": "PH-Regulatory-Compliance-Platform.tmj"
+       "name":"exitUrl",
+       "type":"string",
+       "value":"PH-Regulatory-Compliance-Platform.tmj"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": true,
-     "width": 100,
-     "x": 400,
-     "y": 50
+     "rotation":0,
+     "type":"area",
+     "visible":true,
+     "width":100,
+     "x":400,
+     "y":50
     },
     {
-     "height": 100,
-     "id": 42,
-     "name": "toAIIntelligentAutomation",
-     "properties": [
+     "height":100,
+     "id":42,
+     "name":"toAIIntelligentAutomation",
+     "properties":[
       {
-       "name": "exitUrl",
-       "type": "string",
-       "value": "AI-Intelligent-Automation-Platform.tmj"
+       "name":"exitUrl",
+       "type":"string",
+       "value":"AI-Intelligent-Automation-Platform.tmj"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": true,
-     "width": 100,
-     "x": 550,
-     "y": 50
+     "rotation":0,
+     "type":"area",
+     "visible":true,
+     "width":100,
+     "x":550,
+     "y":50
+    },
+    {
+     "height":34,
+     "id":43,
+     "name":"navLabel_ph-customer-engagement-platform-data-privacy-management",
+     "rotation":0,
+     "text":{
+      "bold":true,
+      "halign":"center",
+      "pixelsize":12,
+      "text":"PH Customer Engagement Platform Data Privacy Management",
+      "wrap":true
+     },
+     "type":"",
+     "visible":true,
+     "width":160.0,
+     "x":70.0,
+     "y":83.0
+    },
+    {
+     "height":34,
+     "id":44,
+     "name":"navLabel_ph-drug-innovation-platform",
+     "rotation":0,
+     "text":{
+      "bold":true,
+      "halign":"center",
+      "pixelsize":12,
+      "text":"PH Drug Innovation Platform",
+      "wrap":true
+     },
+     "type":"",
+     "visible":true,
+     "width":160.0,
+     "x":220.0,
+     "y":83.0
+    },
+    {
+     "height":34,
+     "id":45,
+     "name":"navLabel_ph-regulatory-compliance-platform",
+     "rotation":0,
+     "text":{
+      "bold":true,
+      "halign":"center",
+      "pixelsize":12,
+      "text":"PH Regulatory Compliance Platform",
+      "wrap":true
+     },
+     "type":"",
+     "visible":true,
+     "width":160.0,
+     "x":370.0,
+     "y":83.0
+    },
+    {
+     "height":34,
+     "id":46,
+     "name":"navLabel_ai-intelligent-automation-platform",
+     "rotation":0,
+     "text":{
+      "bold":true,
+      "halign":"center",
+      "pixelsize":12,
+      "text":"AI Intelligent Automation Platform",
+      "wrap":true
+     },
+     "type":"",
+     "visible":true,
+     "width":160.0,
+     "x":520.0,
+     "y":83.0
     }
    ],
-   "opacity": 1,
-   "type": "objectgroup",
-   "visible": true,
-   "x": 0,
-   "y": 0
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
   },
   {
-   "draworder": "topdown",
-   "id": 24,
-   "name": "websiteAreas",
-   "objects": [
+   "draworder":"topdown",
+   "id":24,
+   "name":"websiteAreas",
+   "objects":[
     {
-     "height": 341.755435407799,
-     "id": 2,
-     "name": "",
-     "properties": [
+     "height":341.755435407799,
+     "id":2,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-008"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-008"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 270.014034280456,
-     "x": 176.104911998159,
-     "y": 76.6538594271253
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":270.014034280456,
+     "x":176.104911998159,
+     "y":76.6538594271253
     },
     {
-     "height": 334.853330265731,
-     "id": 3,
-     "name": "",
-     "properties": [
+     "height":334.853330265731,
+     "id":3,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-009"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-009"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 273.46508685149,
-     "x": 460.863683423444,
-     "y": 77.8042102841366
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":273.46508685149,
+     "x":460.863683423444,
+     "y":77.8042102841366
     },
     {
-     "height": 337.154031979754,
-     "id": 4,
-     "name": "",
-     "properties": [
+     "height":337.154031979754,
+     "id":4,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-010"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-010"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 273.46508685149,
-     "x": 750.223858276774,
-     "y": 77.8042102841367
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":273.46508685149,
+     "x":750.223858276774,
+     "y":77.8042102841367
     },
     {
-     "height": 340.605084550788,
-     "id": 5,
-     "name": "",
-     "properties": [
+     "height":340.605084550788,
+     "id":5,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-011"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-011"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 271.164385137467,
-     "x": 1038.43368227309,
-     "y": 75.5035085701139
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":271.164385137467,
+     "x":1038.43368227309,
+     "y":75.5035085701139
     },
     {
-     "height": 337.154031979754,
-     "id": 6,
-     "name": "",
-     "properties": [
+     "height":337.154031979754,
+     "id":6,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-012"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-012"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 266.562981709421,
-     "x": 1327.79385712642,
-     "y": 75.5035085701139
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":266.562981709421,
+     "x":1327.79385712642,
+     "y":75.5035085701139
     },
     {
-     "height": 336.003681122742,
-     "id": 7,
-     "name": "",
-     "properties": [
+     "height":336.003681122742,
+     "id":7,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-001"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-001"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 270.014034280456,
-     "x": 1613.99210770516,
-     "y": 76.9294643056776
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":270.014034280456,
+     "x":1613.99210770516,
+     "y":76.9294643056776
     },
     {
-     "height": 339.096557927439,
-     "id": 8,
-     "name": "",
-     "properties": [
+     "height":339.096557927439,
+     "id":8,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-013"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-013"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 270.61909478628,
-     "x": 750.519216595783,
-     "y": 908.18771058006
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":270.61909478628,
+     "x":750.519216595783,
+     "y":908.18771058006
     },
     {
-     "height": 337.781002829983,
-     "id": 9,
-     "name": "",
-     "properties": [
+     "height":337.781002829983,
+     "id":9,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-014"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-014"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 270.440751759669,
-     "x": 1038.7958360925,
-     "y": 908.545073375262
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":270.440751759669,
+     "x":1038.7958360925,
+     "y":908.545073375262
     },
     {
-     "height": 334.715138361367,
-     "id": 10,
-     "name": "",
-     "properties": [
+     "height":334.715138361367,
+     "id":10,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-001"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://dso-os-orchestrator.dev.dso-os.int.bayer.com/teams/team-001"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 269.577862181226,
-     "x": 1326.11833721688,
-     "y": 909.108114292952
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":269.577862181226,
+     "x":1326.11833721688,
+     "y":909.108114292952
     },
     {
-     "height": 340.554872521641,
-     "id": 11,
-     "name": "",
-     "properties": [
+     "height":340.554872521641,
+     "id":11,
+     "name":"",
+     "properties":[
       {
-       "name": "openWebsite",
-       "type": "string",
-       "value": "https://www.mozilla.org"
+       "name":"openWebsite",
+       "type":"string",
+       "value":"https://www.mozilla.org"
       },
       {
-       "name": "openWebsiteAllowApi",
-       "type": "bool",
-       "value": true
+       "name":"openWebsiteAllowApi",
+       "type":"bool",
+       "value":true
       },
       {
-       "name": "openWebsitePolicy",
-       "type": "string",
-       "value": "camera; microphone"
+       "name":"openWebsitePolicy",
+       "type":"string",
+       "value":"camera; microphone"
       }
      ],
-     "rotation": 0,
-     "type": "area",
-     "visible": false,
-     "width": 270.964310544626,
-     "x": 1614.38474898738,
-     "y": 904.747424837415
+     "rotation":0,
+     "type":"area",
+     "visible":false,
+     "width":270.964310544626,
+     "x":1614.38474898738,
+     "y":904.747424837415
     },
     {
-     "height": 12.809564474808,
-     "id": 12,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 62.6245374323939,
-     "x": 1663.82009678338,
-     "y": 1235.41132934814
+     "height":12.809564474808,
+     "id":12,
+     "name":"",
+     "rotation":0,
+     "type":"",
+     "visible":true,
+     "width":62.6245374323939,
+     "x":1663.82009678338,
+     "y":1235.41132934814
     }
    ],
-   "opacity": 1,
-   "type": "objectgroup",
-   "visible": true,
-   "x": 0,
-   "y": 0
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
   }
  ],
- "nextlayerid": 26,
- "nextobjectid": 43,
- "orientation": "orthogonal",
- "renderorder": "right-down",
- "tiledversion": "1.11.2",
- "tileheight": 32,
- "tilesets": [
+ "nextlayerid":26,
+ "nextobjectid":47,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilesets":[
   {
-   "columns": 12,
-   "firstgid": 1,
-   "image": "../tilesets/Decoration.png",
-   "imageheight": 256,
-   "imagewidth": 384,
-   "margin": 0,
-   "name": "Decoration",
-   "spacing": 0,
-   "tilecount": 96,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":12,
+   "firstgid":1,
+   "image":"../tilesets/Decoration.png",
+   "imageheight":256,
+   "imagewidth":384,
+   "margin":0,
+   "name":"Decoration",
+   "spacing":0,
+   "tilecount":96,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 10,
-   "firstgid": 97,
-   "image": "../tilesets/Misc.png",
-   "imageheight": 352,
-   "imagewidth": 320,
-   "margin": 0,
-   "name": "Misc",
-   "spacing": 0,
-   "tilecount": 110,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":10,
+   "firstgid":97,
+   "image":"../tilesets/Misc.png",
+   "imageheight":352,
+   "imagewidth":320,
+   "margin":0,
+   "name":"Misc",
+   "spacing":0,
+   "tilecount":110,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 12,
-   "firstgid": 207,
-   "image": "../tilesets/Other_Furniture.png",
-   "imageheight": 416,
-   "imagewidth": 384,
-   "margin": 0,
-   "name": "Other_Furniture",
-   "spacing": 0,
-   "tilecount": 156,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":12,
+   "firstgid":207,
+   "image":"../tilesets/Other_Furniture.png",
+   "imageheight":416,
+   "imagewidth":384,
+   "margin":0,
+   "name":"Other_Furniture",
+   "spacing":0,
+   "tilecount":156,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 25,
-   "firstgid": 363,
-   "image": "../tilesets/Room_Builder.png",
-   "imageheight": 1280,
-   "imagewidth": 800,
-   "margin": 0,
-   "name": "Room_Builder",
-   "spacing": 0,
-   "tilecount": 1000,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":25,
+   "firstgid":363,
+   "image":"../tilesets/Room_Builder.png",
+   "imageheight":1280,
+   "imagewidth":800,
+   "margin":0,
+   "name":"Room_Builder",
+   "spacing":0,
+   "tilecount":1000,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 13,
-   "firstgid": 1363,
-   "image": "../tilesets/Seats.png",
-   "imageheight": 448,
-   "imagewidth": 416,
-   "margin": 0,
-   "name": "Seats",
-   "spacing": 0,
-   "tilecount": 182,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":13,
+   "firstgid":1363,
+   "image":"../tilesets/Seats.png",
+   "imageheight":448,
+   "imagewidth":416,
+   "margin":0,
+   "name":"Seats",
+   "spacing":0,
+   "tilecount":182,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 10,
-   "firstgid": 1545,
-   "image": "../tilesets/Tables.png",
-   "imageheight": 864,
-   "imagewidth": 320,
-   "margin": 0,
-   "name": "Tables",
-   "spacing": 0,
-   "tilecount": 270,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":10,
+   "firstgid":1545,
+   "image":"../tilesets/Tables.png",
+   "imageheight":864,
+   "imagewidth":320,
+   "margin":0,
+   "name":"Tables",
+   "spacing":0,
+   "tilecount":270,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 25,
-   "firstgid": 1815,
-   "image": "../tilesets/Exterior.png",
-   "imageheight": 1088,
-   "imagewidth": 800,
-   "margin": 0,
-   "name": "Exterior",
-   "spacing": 0,
-   "tilecount": 850,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":25,
+   "firstgid":1815,
+   "image":"../tilesets/Exterior.png",
+   "imageheight":1088,
+   "imagewidth":800,
+   "margin":0,
+   "name":"Exterior",
+   "spacing":0,
+   "tilecount":850,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 17,
-   "firstgid": 2665,
-   "image": "../tilesets/Room_Builder_free_32x32.png",
-   "imageheight": 736,
-   "imagewidth": 544,
-   "margin": 0,
-   "name": "room2",
-   "spacing": 0,
-   "tilecount": 391,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":17,
+   "firstgid":2665,
+   "image":"../tilesets/Room_Builder_free_32x32.png",
+   "imageheight":736,
+   "imagewidth":544,
+   "margin":0,
+   "name":"room2",
+   "spacing":0,
+   "tilecount":391,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 13,
-   "firstgid": 3056,
-   "image": "../tilesets/User_Zones.png",
-   "imageheight": 672,
-   "imagewidth": 416,
-   "margin": 0,
-   "name": "User_Zones",
-   "spacing": 0,
-   "tilecount": 273,
-   "tileheight": 32,
-   "tilewidth": 32
+   "columns":13,
+   "firstgid":3056,
+   "image":"../tilesets/User_Zones.png",
+   "imageheight":672,
+   "imagewidth":416,
+   "margin":0,
+   "name":"User_Zones",
+   "spacing":0,
+   "tilecount":273,
+   "tileheight":32,
+   "tilewidth":32
   },
   {
-   "columns": 6,
-   "firstgid": 3329,
-   "image": "../tilesets/Special_Zones.png",
-   "imageheight": 64,
-   "imagewidth": 192,
-   "margin": 0,
-   "name": "map_zones",
-   "spacing": 0,
-   "tilecount": 12,
-   "tileheight": 32,
-   "tiles": [
+   "columns":6,
+   "firstgid":3329,
+   "image":"../tilesets/Special_Zones.png",
+   "imageheight":64,
+   "imagewidth":192,
+   "margin":0,
+   "name":"map_zones",
+   "spacing":0,
+   "tilecount":12,
+   "tileheight":32,
+   "tiles":[
     {
-     "id": 2,
-     "properties": [
+     "id":2,
+     "properties":[
       {
-       "name": "collides",
-       "type": "bool",
-       "value": true
+       "name":"collides",
+       "type":"bool",
+       "value":true
       }
      ]
     }
    ],
-   "tilewidth": 32
+   "tilewidth":32
   }
  ],
- "tilewidth": 32,
- "type": "map",
- "version": "1.10",
- "width": 100
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":100
 }
