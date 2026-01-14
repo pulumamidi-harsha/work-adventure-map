@@ -6,6 +6,8 @@ console.log('Script started successfully');
 
 let currentPopup: any = undefined;
 let activeExitAreaName: string | undefined;
+let activeExitPopup: any = undefined;
+let activeExitActionMessage: import('@workadventure/iframe-api-typings').ActionMessage | undefined;
 
 type TiledProperty = { name: string; type: string; value: unknown };
 
@@ -27,6 +29,17 @@ function labelFromExitUrl(exitUrl: string): string {
         .trim();
 }
 
+async function closeExitUi(): Promise<void> {
+    if (activeExitPopup !== undefined) {
+        activeExitPopup.close();
+        activeExitPopup = undefined;
+    }
+    if (activeExitActionMessage !== undefined) {
+        await activeExitActionMessage.remove();
+        activeExitActionMessage = undefined;
+    }
+}
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
@@ -40,7 +53,7 @@ WA.onInit().then(() => {
 
     WA.room.area.onLeave('clock').subscribe(closePopup)
 
-    // Exit navigation: show a styled banner when entering an exit zone
+    // Exit navigation: show a boxed popup + "Press SPACE" prompt near exits
     WA.room.getTiledMap().then((map) => {
         const roomNavigationLayer = (map.layers ?? []).find((l: any) => l && l.type === 'objectgroup' && l.name === 'roomNavigation') as any;
         const objects: any[] = Array.isArray(roomNavigationLayer?.objects) ? roomNavigationLayer.objects : [];
@@ -49,27 +62,35 @@ WA.onInit().then(() => {
             if (!obj || typeof obj.name !== 'string') continue;
             if (obj.type !== 'area') continue;
 
-            const exitUrl = getStringProperty(obj.properties, 'exitUrl');
-            if (!exitUrl) continue;
+            const targetUrl = getStringProperty(obj.properties, 'targetUrl') ?? getStringProperty(obj.properties, 'exitUrl');
+            if (!targetUrl) continue;
 
-            const destinationLabel = labelFromExitUrl(exitUrl);
+            const destinationLabel = labelFromExitUrl(targetUrl);
             const areaName = obj.name;
 
             WA.room.area.onEnter(areaName).subscribe(() => {
-                activeExitAreaName = areaName;
-                WA.ui.banner.openBanner({
-                    id: 'exit-navigation',
-                    text: destinationLabel,
-                    bgColor: '#f5f5dc',
-                    textColor: '#111827',
-                    closable: false,
+                void closeExitUi().then(() => {
+                    activeExitAreaName = areaName;
+                    activeExitPopup = WA.ui.openPopup(
+                        `exitPopup_${areaName}`,
+                        destinationLabel,
+                        []
+                    );
+                    activeExitActionMessage = WA.ui.displayActionMessage({
+                        message: `Press SPACE to go to ${destinationLabel}`,
+                        callback: () => {
+                            void closeExitUi().then(() => {
+                                WA.nav.goToRoom(targetUrl);
+                            });
+                        },
+                    });
                 });
             });
 
             WA.room.area.onLeave(areaName).subscribe(() => {
                 if (activeExitAreaName !== areaName) return;
                 activeExitAreaName = undefined;
-                WA.ui.banner.closeBanner();
+                void closeExitUi();
             });
         }
     }).catch(e => console.error(e));
