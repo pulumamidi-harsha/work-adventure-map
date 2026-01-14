@@ -60,8 +60,8 @@ WA.onInit().then(() => {
                 WA.ui.banner.openBanner({
                     id: 'exit-navigation',
                     text: destinationLabel,
-                    bgColor: '#3f3f46',
-                    textColor: '#ffffff',
+                    bgColor: '#f5f5dc',
+                    textColor: '#111827',
                     closable: false,
                 });
             });
