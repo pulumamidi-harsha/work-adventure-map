@@ -70573,10 +70573,442 @@
    "visible": true,
    "x": 0,
    "y": 0
+  },
+  {
+   "draworder": "topdown",
+   "id": 21,
+   "name": "websiteAreas",
+   "objects": [
+    {
+     "height": 337.154031979754,
+     "id": 91,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep8600675q30mv62amqd"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1038.43368227309,
+     "y": 75.5035085701139
+    },
+    {
+     "height": 337.154031979754,
+     "id": 92,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep96006f5q30vtjqvgw0"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1327.79385712642,
+     "y": 75.5035085701139
+    },
+    {
+     "height": 337.154031979754,
+     "id": 93,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep8n006b5q304a8k01ht"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1613.99210770516,
+     "y": 76.9294643056776
+    },
+    {
+     "height": 337.154031979754,
+     "id": 94,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep8w006d5q30ieod7nd1"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1900.1903582839,
+     "y": 76.9294643056776
+    },
+    {
+     "height": 337.154031979754,
+     "id": 95,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep7d005z5q30oob4ea0y"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 364.979138438137,
+     "x": 2186.38860886264,
+     "y": 76.9294643056776
+    },
+    {
+     "height": 337.154031979754,
+     "id": 96,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep7l00615q30mmmcnzii"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 176.104911998159,
+     "y": 77.8042102841366
+    },
+    {
+     "height": 337.154031979754,
+     "id": 97,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep7s00635q30goscd0ex"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 460.863683423444,
+     "y": 77.8042102841366
+    },
+    {
+     "height": 337.154031979754,
+     "id": 98,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep7z00655q30w3vyjtkx"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 750.223858276774,
+     "y": 77.8042102841367
+    },
+    {
+     "height": 337.154031979754,
+     "id": 99,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1614.38474898738,
+     "y": 904.747424837415
+    },
+    {
+     "height": 337.154031979754,
+     "id": 100,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1900.1903582839,
+     "y": 904.747424837415
+    },
+    {
+     "height": 337.154031979754,
+     "id": 101,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceep6n005t5q30z2lwlisg"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 176.104911998159,
+     "y": 908.18771058006
+    },
+    {
+     "height": 337.154031979754,
+     "id": 102,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 460.863683423444,
+     "y": 908.18771058006
+    },
+    {
+     "height": 337.154031979754,
+     "id": 103,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 750.519216595783,
+     "y": 908.18771058006
+    },
+    {
+     "height": 337.154031979754,
+     "id": 104,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1038.7958360925,
+     "y": 908.545073375262
+    },
+    {
+     "height": 337.154031979754,
+     "id": 105,
+     "name": "",
+     "properties": [
+      {
+       "name": "openWebsite",
+       "type": "string",
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams"
+      },
+      {
+       "name": "openWebsiteAllowApi",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "openWebsitePolicy",
+       "type": "string",
+       "value": "camera; microphone"
+      }
+     ],
+     "rotation": 0,
+     "type": "area",
+     "visible": false,
+     "width": 273.46508685149,
+     "x": 1326.11833721688,
+     "y": 909.108114292952
+    }
+   ],
+   "opacity": 1,
+   "type": "objectgroup",
+   "visible": true,
+   "x": 0,
+   "y": 0
   }
  ],
- "nextlayerid": 21,
- "nextobjectid": 91,
+ "nextlayerid": 22,
+ "nextobjectid": 106,
  "orientation": "orthogonal",
  "renderorder": "right-down",
  "tiledversion": "1.11.2",

@@ -75250,9 +75250,9 @@
      "rotation": 0,
      "type": "area",
      "visible": true,
-        "width": 128.845302174147,
-        "x": 2554.93165261521,
-        "y": 37.6033396087419
+     "width": 128.845302174147,
+     "x": 2554.93165261521,
+     "y": 37.6033396087419
     },
     {
      "height": 100,
@@ -75268,9 +75268,9 @@
      "rotation": 0,
      "type": "area",
      "visible": true,
-    "width": 141.94180704441,
-    "x": 3.59875583203711,
-    "y": 700.286486044037
+     "width": 141.94180704441,
+     "x": 3.59875583203711,
+     "y": 700.286486044037
     },
     {
      "height": 100,
@@ -75286,9 +75286,9 @@
      "rotation": 0,
      "type": "area",
      "visible": true,
-    "width": 141.94180704441,
-    "x": 2857.26446754522,
-    "y": 1475.59957436359
+     "width": 141.94180704441,
+     "x": 2857.26446754522,
+     "y": 1475.59957436359
     },
     {
      "height": 100,
@@ -75304,9 +75304,9 @@
      "rotation": 0,
      "type": "area",
      "visible": true,
-    "width": 141.94180704441,
-    "x": 3053.33969059507,
-    "y": 700.286486044037
+     "width": 141.94180704441,
+     "x": 3053.33969059507,
+     "y": 700.286486044037
     },
     {
      "height": 34,
@@ -75323,8 +75323,8 @@
      "type": "",
      "visible": true,
      "width": 160,
-    "x": 2539.35,
-    "y": 79.41
+     "x": 2539.35,
+     "y": 79.41
     },
     {
      "height": 34,
@@ -75341,8 +75341,8 @@
      "type": "",
      "visible": true,
      "width": 160,
-    "x": -5.43,
-    "y": 742.09
+     "x": -5.43,
+     "y": 742.09
     },
     {
      "height": 34,
@@ -75359,8 +75359,8 @@
      "type": "",
      "visible": true,
      "width": 160,
-    "x": 2848.24,
-    "y": 1517.4
+     "x": 2848.24,
+     "y": 1517.4
     },
     {
      "height": 34,
@@ -75377,8 +75377,8 @@
      "type": "",
      "visible": true,
      "width": 160,
-    "x": 3044.31,
-    "y": 742.09
+     "x": 3044.31,
+     "y": 742.09
     }
    ],
    "opacity": 1,
@@ -75400,7 +75400,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasytgw00h83o2zggl57gth"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqn400h85q30lbuupxsl"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75428,7 +75428,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasytgw00h83o2zggl57gth"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqn400h85q30lbuupxsl"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75456,7 +75456,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasytgw00h83o2zggl57gth"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqn400h85q30lbuupxsl"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75484,7 +75484,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasyth100ha3o2zu7l3lnju"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnh00ha5q30sbb45xqo"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75512,7 +75512,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasyth600hc3o2zcmzse2cc"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnq00hc5q302cy3ka8m"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75540,7 +75540,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasythg00he3o2zw7hyp1tm"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnv00he5q30qej4hxl0"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75568,7 +75568,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasytgw00h83o2zggl57gth"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqn400h85q30lbuupxsl"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75596,7 +75596,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasyth100ha3o2zu7l3lnju"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnh00ha5q30sbb45xqo"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75624,7 +75624,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasyth600hc3o2zcmzse2cc"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnq00hc5q302cy3ka8m"
       },
       {
        "name": "openWebsiteAllowApi",
@@ -75652,7 +75652,7 @@
       {
        "name": "openWebsite",
        "type": "string",
-       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkasythg00he3o2zw7hyp1tm"
+       "value": "https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqnv00he5q30qej4hxl0"
       },
       {
        "name": "openWebsiteAllowApi",
