@@ -1168,7 +1168,7 @@
                  "y":302.63
                 }, 
                 {
-                 "height":26.84,
+                 "height":50.8399999999999,
                  "id":9,
                  "name":"",
                  "rotation":0,
@@ -1182,9 +1182,9 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":159.23,
-                 "x":2510.86119047619,
-                 "y":915.151428571429
+                 "width":135.23,
+                 "x":2458.86119047619,
+                 "y":981.151428571429
                 }, 
                 {
                  "height":26.84,
@@ -1245,25 +1245,6 @@
                 }, 
                 {
                  "height":26.84,
-                 "id":13,
-                 "name":"",
-                 "rotation":90,
-                 "text":
-                    {
-                     "bold":true,
-                     "halign":"center",
-                     "pixelsize":14,
-                     "text":"TechOps LATAM Squad",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":159.23,
-                 "x":2869.39175814049,
-                 "y":1084.92118369855
-                }, 
-                {
-                 "height":26.84,
                  "id":14,
                  "name":"",
                  "rotation":90,
@@ -1282,29 +1263,10 @@
                  "y":1071.8144869957
                 }, 
                 {
-                 "height":26.84,
-                 "id":15,
-                 "name":"",
-                 "rotation":90,
-                 "text":
-                    {
-                     "bold":true,
-                     "halign":"center",
-                     "pixelsize":14,
-                     "text":"TechOps NA Squad",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":159.23,
-                 "x":2872.01309748106,
-                 "y":827.408588982183
-                }, 
-                {
-                 "height":26.84,
+                 "height":44.8399999999999,
                  "id":16,
                  "name":"",
-                 "rotation":-90,
+                 "rotation":0,
                  "text":
                     {
                      "bold":true,
@@ -1315,9 +1277,9 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":264.083573622773,
-                 "x":2892.98381220561,
-                 "y":1087.54252303912
+                 "width":168.083573622773,
+                 "x":2570.98381220561,
+                 "y":985.54252303912
                 }, 
                 {
                  "height":46.84,
@@ -1358,7 +1320,7 @@
                  "y":1172.0467212779
                 }, 
                 {
-                 "height":47.8107147245546,
+                 "height":77.8107147245546,
                  "id":19,
                  "name":"",
                  "rotation":0,
@@ -1372,9 +1334,47 @@
                     },
                  "type":"",
                  "visible":true,
-                 "width":177.579375383985,
-                 "x":2822.20765001024,
-                 "y":206.772504607823
+                 "width":121.579375383985,
+                 "x":2882.20765001024,
+                 "y":208.772504607823
+                }, 
+                {
+                 "height":26.84,
+                 "id":114,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"TechOps LATAM Squad",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":159.23,
+                 "x":2272.385,
+                 "y":166.58
+                }, 
+                {
+                 "height":26.84,
+                 "id":115,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"TechOps NA Squad",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":159.23,
+                 "x":2686.385,
+                 "y":224.58
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1680,7 +1680,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqzm00ka5q30nznb5eo1"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqzm00ka5q30nznb5eo1"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1788,7 +1788,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqxi00js5q30r2243soe"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqxi00js5q30r2243soe"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1815,7 +1815,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqxq00ju5q30qodsyep0"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqxq00ju5q30qodsyep0"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1869,7 +1869,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqvg00ja5q30wmupmfy1"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqvg00ja5q30wmupmfy1"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1896,7 +1896,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqw300jg5q30048u1rmh"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqw300jg5q30048u1rmh"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1923,7 +1923,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqwc00ji5q30u9ku0wil"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqwc00ji5q30u9ku0wil"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1950,7 +1950,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqx200jo5q30xepnya3b"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqx200jo5q30xepnya3b"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1977,7 +1977,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqyc00k05q30jegt8v39"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqyc00k05q30jegt8v39"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2004,7 +2004,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqzm00ka5q30nznb5eo1"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqzm00ka5q30nznb5eo1"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2031,7 +2031,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqx200jo5q30xepnya3b"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqz300kf5q30mg8hn5xl"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2058,7 +2058,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceer1c00km5q307nxoz0j8"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer1c00km5q307nxoz0j8"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2085,7 +2085,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqyk00k25q30e8s4n1aj"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqyk00k25q30e8s4n1aj"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2100,8 +2100,8 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":276.016677830941,
-                 "x":2441.89596730463,
+                 "width":124.016677830941,
+                 "x":2469.89596730463,
                  "y":905.745476874003
                 }, 
                 {
@@ -2112,7 +2112,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqzu00kc5q30pnb26umc"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqzu00kc5q30pnb26umc"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2132,14 +2132,14 @@
                  "y":1098.40886842105
                 }, 
                 {
-                 "height":161.077,
+                 "height":187.077,
                  "id":107,
                  "name":"",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqx200jo5q30xepnya3b"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer1v00kr5q30ft8nm9px"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2156,7 +2156,7 @@
                  "visible":false,
                  "width":163.736298245614,
                  "x":2824.67092583732,
-                 "y":105.74539154705
+                 "y":79.74539154705
                 }, 
                 {
                  "height":71.7628054226475,
@@ -2166,7 +2166,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceeqyt00k45q307eey35ct"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqyt00k45q307eey35ct"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2193,7 +2193,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceer0400ke5q30yza9g3dp"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer0400ke5q30yza9g3dp"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2220,7 +2220,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceer0q00ki5q30rthzmqy1"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer0q00ki5q30rthzmqy1"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2240,14 +2240,14 @@
                  "y":533.177850079745
                 }, 
                 {
-                 "height":235.079706539075,
-                 "id":111,
+                 "height":203.632,
+                 "id":116,
                  "name":"",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceer1l00ko5q304s3hzx2t"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer2100kq5q3099sb5zc0"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2262,19 +2262,19 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":148.424293460925,
-                 "x":2735.35723125997,
-                 "y":1015.47450079745
+                 "width":154.561,
+                 "x":2694.7195,
+                 "y":71.184
                 }, 
                 {
-                 "height":237.631540669857,
-                 "id":112,
+                 "height":147.08,
+                 "id":117,
                  "name":"",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceeqx200jo5q30xepnya3b"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer1l00ko5q304s3hzx2t"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2289,19 +2289,19 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":115.250449760766,
-                 "x":2885.91544497608,
-                 "y":839.397945773525
+                 "width":354.424,
+                 "x":2191.788,
+                 "y":74.46
                 }, 
                 {
-                 "height":237.632,
-                 "id":113,
+                 "height":153.632,
+                 "id":118,
                  "name":"",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https://dso-os.staging.dso-os.int.bayer.com/teams/cmkceer2100kq5q3099sb5zc0"
+                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceer2h00kt5q30yk7qm2wp"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -2316,9 +2316,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":130.561004784689,
-                 "x":2749.39254385965,
-                 "y":817.70712599681
+                 "width":127.25,
+                 "x":2594.375,
+                 "y":903.184
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2327,7 +2327,7 @@
          "y":0
         }],
  "nextlayerid":23,
- "nextobjectid":114,
+ "nextobjectid":119,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
