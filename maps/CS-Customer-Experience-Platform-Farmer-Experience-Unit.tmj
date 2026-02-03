@@ -1194,6 +1194,90 @@
                  "width":182.167,
                  "x":2516.5065,
                  "y":931.911433333333
+                }, 
+                {
+                 "height":24.8438,
+                 "id":73,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Arial",
+                     "halign":"center",
+                     "pixelsize":10,
+                     "text":"EMEA",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":182.107,
+                 "x":1048.28666666667,
+                 "y":932.622433333333
+                }, 
+                {
+                 "height":25.3438,
+                 "id":74,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Arial",
+                     "halign":"center",
+                     "pixelsize":10,
+                     "text":"LATAM",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":181.5,
+                 "x":758.543333333333,
+                 "y":933.955766666667
+                }, 
+                {
+                 "height":24.3546,
+                 "id":75,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Arial",
+                     "halign":"center",
+                     "pixelsize":10,
+                     "text":"APAC IBSL SmallHolder",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":181.5,
+                 "x":1622.62333333333,
+                 "y":933.122433333333
+                }, 
+                {
+                 "height":24.8438,
+                 "id":76,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Arial",
+                     "halign":"center",
+                     "pixelsize":10,
+                     "text":"NA-ANZ",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":181,
+                 "x":1334.74333333333,
+                 "y":931.8671
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1587,90 +1671,6 @@
                  "width":62.6245374323939,
                  "x":1663.82009678338,
                  "y":1235.41132934814
-                }, 
-                {
-                 "height":24.84375,
-                 "id":19,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "fontfamily":"Arial",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"EMEA",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":false,
-                 "width":182.106696702847,
-                 "x":1046.04330329715,
-                 "y":932
-                }, 
-                {
-                 "height":25.34375,
-                 "id":22,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "fontfamily":"Arial",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"LATAM",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":false,
-                 "width":181.5,
-                 "x":757.63,
-                 "y":932
-                }, 
-                {
-                 "height":24.3546426377228,
-                 "id":23,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "fontfamily":"Arial",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"APAC IBSL SmallHolder",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":false,
-                 "width":181.5,
-                 "x":1621.71,
-                 "y":932.5
-                }, 
-                {
-                 "height":24.8438,
-                 "id":36,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "fontfamily":"Arial",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"NA-ANZ",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":false,
-                 "width":181,
-                 "x":1333.83333333333,
-                 "y":932.5781
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1679,7 +1679,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":73,
+ "nextobjectid":77,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

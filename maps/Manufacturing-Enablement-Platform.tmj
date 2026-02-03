@@ -1298,6 +1298,27 @@
                  "width":122,
                  "x":2562,
                  "y":103
+                }, 
+                {
+                 "height":34,
+                 "id":107,
+                 "name":"navLabel_cs-product-fulfillment-platform",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Arial",
+                     "halign":"center",
+                     "pixelsize":10,
+                     "text":"CS Product Fulfillment Platform",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":128.667,
+                 "x":2864.99983333333,
+                 "y":1527
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1399,31 +1420,10 @@
                  "width":159.94180704441,
                  "x":3040.00635726174,
                  "y":736.144388966195
-                }, 
-                {
-                 "height":34,
-                 "id":17,
-                 "name":"navLabel_cs-product-fulfillment-platform",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "fontfamily":"Arial",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"CS Product Fulfillment Platform",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":128.666666666667,
-                 "x":2866.24,
-                 "y":1530.73333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1925,7 +1925,7 @@
          "y":0
         }],
  "nextlayerid":23,
- "nextobjectid":107,
+ "nextobjectid":108,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
