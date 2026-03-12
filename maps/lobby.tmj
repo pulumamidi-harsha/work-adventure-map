@@ -3377,7 +3377,7 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"tilesets\/Decor.png",
+         "image":"../tilesets\/Decor.png",
          "imageheight":256,
          "imagewidth":384,
          "margin":0,
@@ -3390,7 +3390,7 @@
         {
          "columns":6,
          "firstgid":97,
-         "image":"tilesets\/Special_Zones.png",
+         "image":"../tilesets\/Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
@@ -3413,7 +3413,7 @@
         {
          "columns":10,
          "firstgid":109,
-         "image":"tilesets\/Misc.png",
+         "image":"../tilesets\/Misc.png",
          "imageheight":352,
          "imagewidth":320,
          "margin":0,
@@ -3426,7 +3426,7 @@
         {
          "columns":12,
          "firstgid":219,
-         "image":"tilesets\/Other_Furniture.png",
+         "image":"../tilesets\/Other_Furniture.png",
          "imageheight":416,
          "imagewidth":384,
          "margin":0,
@@ -3439,7 +3439,7 @@
         {
          "columns":25,
          "firstgid":375,
-         "image":"tilesets\/Room_Builder.png",
+         "image":"../tilesets\/Room_Builder.png",
          "imageheight":1280,
          "imagewidth":800,
          "margin":0,
@@ -3452,7 +3452,7 @@
         {
          "columns":13,
          "firstgid":1375,
-         "image":"tilesets\/Seats.png",
+         "image":"../tilesets\/Seats.png",
          "imageheight":448,
          "imagewidth":416,
          "margin":0,
@@ -3465,7 +3465,7 @@
         {
          "columns":10,
          "firstgid":1557,
-         "image":"tilesets\/Tables.png",
+         "image":"../tilesets\/Tables.png",
          "imageheight":864,
          "imagewidth":320,
          "margin":0,
@@ -3478,7 +3478,7 @@
         {
          "columns":25,
          "firstgid":1827,
-         "image":"tilesets\/Exterior.png",
+         "image":"../tilesets\/Exterior.png",
          "imageheight":1088,
          "imagewidth":800,
          "margin":0,
@@ -3491,7 +3491,7 @@
         {
          "columns":13,
          "firstgid":2677,
-         "image":"tilesets\/User_Zones.png",
+         "image":"../tilesets\/User_Zones.png",
          "imageheight":672,
          "imagewidth":416,
          "margin":0,
@@ -3504,7 +3504,7 @@
         {
          "columns":17,
          "firstgid":2950,
-         "image":"tilesets\/Room_Builder_free_32x32.png",
+         "image":"../tilesets\/Room_Builder_free_32x32.png",
          "imageheight":736,
          "imagewidth":544,
          "margin":0,
@@ -3517,7 +3517,7 @@
         {
          "columns":16,
          "firstgid":3341,
-         "image":"tilesets\/Interiors_free_32x32.png",
+         "image":"../tilesets\/Interiors_free_32x32.png",
          "imageheight":2848,
          "imagewidth":512,
          "margin":0,
