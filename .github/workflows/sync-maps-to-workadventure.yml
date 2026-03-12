@@ -95,9 +95,11 @@ jobs:
           echo "$EXISTING_MAPS" | jq -r '.maps | keys[]' | while read -r EXISTING_WAM; do
               if ! grep -q "^${EXISTING_WAM}$" /tmp/expected_wams.txt 2>/dev/null; then
                   echo "   🗑️  Deleting orphaned map: $EXISTING_WAM"
+                  # URL encode the map name to handle spaces, parentheses, and special characters
+                  ENCODED_WAM=$(printf '%s\n' "$EXISTING_WAM" | jq -sRr @uri)
                   DELETE_RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
                       -X DELETE \
-                      "$MAPSTORAGE_API_URL/$EXISTING_WAM" \
+                      "$MAPSTORAGE_API_URL/$ENCODED_WAM" \
                       2>&1)
                   
                   if echo "$DELETE_RESPONSE" | grep -q "successfully deleted\|deleted successfully"; then
@@ -208,9 +210,11 @@ jobs:
           echo "$EXISTING_MAPS" | jq -r '.maps | keys[]' | while read -r EXISTING_WAM; do
               if ! grep -q "^${EXISTING_WAM}$" /tmp/expected_wams_staging.txt 2>/dev/null; then
                   echo "   🗑️  Deleting orphaned map: $EXISTING_WAM"
+                  # URL encode the map name to handle spaces, parentheses, and special characters
+                  ENCODED_WAM=$(printf '%s\n' "$EXISTING_WAM" | jq -sRr @uri)
                   DELETE_RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
                       -X DELETE \
-                      "$MAPSTORAGE_API_URL/$EXISTING_WAM" \
+                      "$MAPSTORAGE_API_URL/$ENCODED_WAM" \
                       2>&1)
                   
                   if echo "$DELETE_RESPONSE" | grep -q "successfully deleted\|deleted successfully"; then
