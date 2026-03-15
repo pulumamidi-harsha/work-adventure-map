@@ -1,0 +1,1231 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "12_room_office.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "12_room_office.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "12_room_office.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 1154.7536433032617
+            }
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Decor": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Exterior": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Misc": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Seats": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#Tables": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#User_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#map_zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "AI-Intelligent-Automation-Platform.tmj#room2": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Application-Operations-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Application-Operations-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Application-Operations-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CH-Consumer-Customer-Experience-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CH-Product-Experience-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CH-Product-Experience-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Global-Data-Assets-Analytics-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Fulfillment-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "CS-Product-Pipeline-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "CS-Product-Pipeline-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Cyber-Defense-Center-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Defense-Center-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Architecture-Innovation-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Assurance-Advancement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Culture-Enablement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Cyber-Security-Technologies-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Digital-Workplace-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Digital-Workplace-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Employee-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Employee-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Engineering-Enablement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Engineering-Enablement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Data-Analytics-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Enterprise-Enablement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Enterprise-Enablement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Finance-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Finance-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Infrastructure-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Infrastructure-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Integrated-Planning-Logistics-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Integration-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Integration-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Lab-Enablement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Lab-Enablement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "Manufacturing-Enablement-Platform.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "Manufacturing-Enablement-Platform.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj": {
+            "scale": 0.42779687499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600.0584389495602,
+                "y": 799.4448299791812
+            }
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Decor": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Exterior": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Misc": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Room_Builder": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Seats": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#Tables": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#User_Zones": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#map_zones": {
+            "scaleInDock": 1
+        },
+        "PH-Customer-Engagement-Platform-Content-Dev-Delivery.tmj#room2": {
+            "scaleInDock": 1
+        },
+        "lobby.tmj": {
+            "scale": 1,
+            "selectedLayer": 13,
+            "viewCenter": {
+                "x": 479.5,
+                "y": 1884
+            }
+        },
+        "lobby.tmj#Decor": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Exterior": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Interier": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Misc": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Other_Furniture": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Room_2": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Room_Builder": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Seats": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#Tables": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#User_Zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#map_zones": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "lobby.tmj#room2": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "/Users/benwatson/Library/CloudStorage/OneDrive-Bayer/BURNDRAGON/Work/DSO OS/work-adventure-map/tilesets",
+    "openFiles": [
+    ],
+    "project": "DSO_OS.tiled-project",
+    "recentFiles": [
+        "12_room_office.tmj",
+        "lobby.tmj",
+        "Manufacturing-Enablement-Platform.tmj",
+        "PH-Customer-Engagement-Platform-Analytics-AI.tmj",
+        "AI-Intelligent-Automation-Platform.tmj",
+        "Application-Operations-Platform.tmj",
+        "CH-Consumer-Customer-Experience-Platform.tmj",
+        "CH-Product-Experience-Platform.tmj",
+        "CS-Customer-Experience-Platform-Business-Capabilities-Unit.tmj",
+        "CS-Customer-Experience-Platform-Exchange-Trade-Experience-Unit.tmj",
+        "CS-Customer-Experience-Platform-Farmer-Experience-Unit.tmj",
+        "CS-Customer-Experience-Platform-Sales-Service-Experience-Unit.tmj"
+    ]
+}
