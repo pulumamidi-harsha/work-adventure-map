@@ -1,0 +1,192 @@
+name: Build Map Artifacts
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - '**/*.tmj'
+      - '**/*.json'
+      - 'src/**'
+      - 'tilesets/**'
+      - 'public/**'
+      - 'package.json'
+      - 'vite.config.ts'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Build for which environment?'
+        required: true
+        type: choice
+        options:
+          - all
+          - dev
+          - staging
+          - prod
+        default: all
+
+# ──────────────────────────────────────────────────────────────
+# HOW IT WORKS
+# ──────────────────────────────────────────────────────────────
+# All environments run on private subnets (internal ALB), so the
+# GitHub runner cannot reach map-storage directly.
+#
+# This workflow:
+#   1. Replaces "staging.dso-os.int.bayer.com" in .tmj files
+#      with the correct domain for each environment.
+#   2. Runs `npm run build` to compile TS + optimise tilesets.
+#   3. Zips dist/ and uploads it as a GitHub Actions artifact.
+#
+# You then download the artifact and upload it to map-storage:
+#   - Via the Map Storage UI (drag & drop the zip)
+#   - Via the local script: ./scripts/deploy-maps.sh
+#
+# On push → builds artifacts for ALL 3 environments.
+# On manual → builds for the selected environment(s).
+# ──────────────────────────────────────────────────────────────
+
+jobs:
+  # ── Matrix setup ────────────────────────────────────────────
+  prepare:
+    name: Prepare build matrix
+    runs-on: ubuntu-latest
+    outputs:
+      environments: ${{ steps.set-matrix.outputs.environments }}
+    steps:
+      - name: Set environment matrix
+        id: set-matrix
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo 'environments=["dev","staging","prod"]' >> $GITHUB_OUTPUT
+          else
+            ENV="${{ github.event.inputs.environment }}"
+            if [ "$ENV" == "all" ]; then
+              echo 'environments=["dev","staging","prod"]' >> $GITHUB_OUTPUT
+            else
+              echo "environments=[\"$ENV\"]" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+  # ── Build per environment ───────────────────────────────────
+  build:
+    name: Build — ${{ matrix.environment }}
+    runs-on: ubuntu-latest
+    needs: prepare
+    strategy:
+      matrix:
+        environment: ${{ fromJson(needs.prepare.outputs.environments) }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # ── Determine target domain ─────────────────────────────
+      - name: Set domains for ${{ matrix.environment }}
+        id: env
+        run: |
+          SOURCE_DOMAIN="staging.dso-os.int.bayer.com"
+          echo "source_domain=$SOURCE_DOMAIN" >> $GITHUB_OUTPUT
+
+          case "${{ matrix.environment }}" in
+            dev)
+              echo "app_domain=dev.dso-os.int.bayer.com"                >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.dev.dso-os.int.bayer.com"  >> $GITHUB_OUTPUT
+              ;;
+            staging)
+              echo "app_domain=staging.dso-os.int.bayer.com"                >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.staging.dso-os.int.bayer.com"  >> $GITHUB_OUTPUT
+              ;;
+            prod)
+              echo "app_domain=dso-os.int.bayer.com"                    >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.dso-os.int.bayer.com"      >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+      # ── Replace domains in .tmj files ───────────────────────
+      - name: Replace domains for ${{ matrix.environment }}
+        run: |
+          SOURCE="${{ steps.env.outputs.source_domain }}"
+          TARGET="${{ steps.env.outputs.app_domain }}"
+
+          if [ "$SOURCE" == "$TARGET" ]; then
+            echo "✅ Source = target ($SOURCE) — no replacement needed"
+          else
+            BEFORE=$(grep -rc "$SOURCE" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}')
+            echo "🔄 Replacing '$SOURCE' → '$TARGET' ($BEFORE occurrences)"
+            [ "$BEFORE" -gt 0 ] && sed -i "s|$SOURCE|$TARGET|g" *.tmj
+            AFTER=$(grep -rc "$SOURCE" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}')
+            echo "   Remaining: $AFTER"
+          fi
+
+      # ── Install + Build ─────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build maps
+        run: |
+          echo "🏗️  Building maps for ${{ matrix.environment }}..."
+          npm run build
+
+          echo ""
+          TMJ_COUNT=$(find dist -name "*.tmj" 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL_SIZE=$(du -sh dist/ | cut -f1)
+          echo "📊 Maps in dist/: $TMJ_COUNT"
+          echo "📦 dist/ size: $TOTAL_SIZE"
+
+      # ── Upload artifact ─────────────────────────────────────
+      - name: Upload artifact — ${{ matrix.environment }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: maps-${{ matrix.environment }}-${{ github.run_number }}
+          path: dist/
+          retention-days: 30
+
+      # ── Summary ─────────────────────────────────────────────
+      - name: Build summary
+        if: always()
+        run: |
+          echo ""
+          echo "========================================="
+          echo "✅ Build complete — ${{ matrix.environment }}"
+          echo "========================================="
+          echo "📦 Artifact: maps-${{ matrix.environment }}-${{ github.run_number }}"
+          echo "🌐 App domain: ${{ steps.env.outputs.app_domain }}"
+          echo "📡 Map storage: ${{ steps.env.outputs.vo_domain }}"
+          echo ""
+          echo "📋 Maps built:"
+          find dist -name "*.tmj" -exec basename {} \; 2>/dev/null | sort
+          echo ""
+          echo "────────────────────────────────────────"
+          echo "To upload to ${{ matrix.environment }}:"
+          echo ""
+          echo "  Option 1 — Map Storage UI:"
+          echo "    Open https://${{ steps.env.outputs.vo_domain }}/map-storage/ui"
+          echo "    Download artifact and upload the zip"
+          echo ""
+          echo "  Option 2 — Local script (with network access):"
+          echo "    ENVIRONMENT=${{ matrix.environment }} ./scripts/deploy-maps.sh"
+          echo "────────────────────────────────────────"
+
+          cat >> $GITHUB_STEP_SUMMARY << EOF
+          ## 🗺️ ${{ matrix.environment }} — Build Complete
+
+          | Detail | Value |
+          |--------|-------|
+          | Environment | **${{ matrix.environment }}** |
+          | App Domain | \`${{ steps.env.outputs.app_domain }}\` |
+          | Map Storage | \`${{ steps.env.outputs.vo_domain }}\` |
+          | Artifact | \`maps-${{ matrix.environment }}-${{ github.run_number }}\` |
+          | Commit | \`${{ github.sha }}\` |
+
+          **Upload instructions:**
+          - Download the artifact from the Actions tab
+          - Upload via Map Storage UI: \`https://${{ steps.env.outputs.vo_domain }}/map-storage/ui\`
+          - Or run locally: \`ENVIRONMENT=${{ matrix.environment }} ./scripts/deploy-maps.sh\`
+          EOF
