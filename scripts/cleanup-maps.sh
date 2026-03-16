@@ -170,16 +170,26 @@ fi
 # ═══════════════════════════════════════════════════════════════
 DELETE_OK=0
 DELETE_FAIL=0
+DELETE_SPECIAL=0
 
 echo "🗑️  Deleting maps..."
 while read -r MAP_KEY; do
   echo -n "   🗑️  ${MAP_KEY} ... "
 
-  # URL-encode the map key (spaces, parentheses, etc.)
-  ENCODED_KEY=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${MAP_KEY}'))" 2>/dev/null || echo "$MAP_KEY")
+  # Check if the key has spaces or special chars that break HTTP URLs
+  if echo "$MAP_KEY" | grep -q '[ ()]'; then
+    # Can't delete via HTTP due to URL encoding bug in map-storage.
+    # Mark for batch cleanup via empty zip upload.
+    echo -e "${YELLOW}⏳ (special chars — will batch-delete)${NC}"
+    DELETE_SPECIAL=$((DELETE_SPECIAL + 1))
+    continue
+  fi
+
+  # URL-encode the map key (safe chars only)
+  ENCODED_KEY=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${MAP_KEY}', safe='/'))" 2>/dev/null || echo "$MAP_KEY")
 
   # DELETE /map-storage/<name>.wam  → 204 No Content
-  DEL_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+  DEL_CODE=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
     -u "${AUTH}" \
     -X DELETE \
     "${MAP_STORAGE_URL}/${ENCODED_KEY}" 2>/dev/null || echo "000")
@@ -192,6 +202,38 @@ while read -r MAP_KEY; do
     DELETE_FAIL=$((DELETE_FAIL + 1))
   fi
 done <<< "$MAP_KEYS"
+
+# ── Handle maps with special characters via empty zip upload ──
+if [ "$DELETE_SPECIAL" -gt 0 ]; then
+  echo ""
+  echo -e "${YELLOW}🔄 ${DELETE_SPECIAL} maps have special characters (spaces/parentheses).${NC}"
+  echo -e "   Uploading empty zip to wipe all remaining maps..."
+
+  TMPDIR_CLEAN=$(mktemp -d)
+  # Create a minimal valid zip with just a dummy file then remove it
+  mkdir -p "${TMPDIR_CLEAN}/empty"
+  echo "{}" > "${TMPDIR_CLEAN}/empty/.gitkeep"
+  EMPTY_ZIP="${TMPDIR_CLEAN}/empty-maps.zip"
+  (cd "${TMPDIR_CLEAN}/empty" && zip -r "$EMPTY_ZIP" .gitkeep) >/dev/null 2>&1
+
+  UPLOAD_CODE=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
+    -u "${AUTH}" \
+    -X POST \
+    -F "file=@${EMPTY_ZIP}" \
+    "${MAP_STORAGE_URL}/upload" 2>/dev/null || echo "000")
+
+  rm -rf "$TMPDIR_CLEAN"
+
+  if [ "$UPLOAD_CODE" = "200" ] || [ "$UPLOAD_CODE" = "201" ]; then
+    echo -e "   ${GREEN}✅ Empty zip uploaded — all maps wiped${NC}"
+    DELETE_OK=$((DELETE_OK + DELETE_SPECIAL))
+    DELETE_SPECIAL=0
+  else
+    echo -e "   ${RED}❌ Upload failed (HTTP ${UPLOAD_CODE})${NC}"
+    DELETE_FAIL=$((DELETE_FAIL + DELETE_SPECIAL))
+    DELETE_SPECIAL=0
+  fi
+fi
 
 echo ""
 echo -e "${CYAN}=========================================${NC}"
