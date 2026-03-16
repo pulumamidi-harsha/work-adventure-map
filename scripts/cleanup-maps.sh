@@ -175,11 +175,14 @@ echo "🗑️  Deleting maps..."
 while read -r MAP_KEY; do
   echo -n "   🗑️  ${MAP_KEY} ... "
 
+  # URL-encode the map key (spaces, parentheses, etc.)
+  ENCODED_KEY=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${MAP_KEY}'))" 2>/dev/null || echo "$MAP_KEY")
+
   # DELETE /map-storage/<name>.wam  → 204 No Content
   DEL_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
     -u "${AUTH}" \
     -X DELETE \
-    "${MAP_STORAGE_URL}/${MAP_KEY}" 2>/dev/null || echo "000")
+    "${MAP_STORAGE_URL}/${ENCODED_KEY}" 2>/dev/null || echo "000")
 
   if [ "$DEL_CODE" = "200" ] || [ "$DEL_CODE" = "204" ] || [ "$DEL_CODE" = "201" ]; then
     echo -e "${GREEN}✅${NC}"

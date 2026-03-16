@@ -273,10 +273,11 @@ if [ "$SKIP_CLEANUP" != "true" ]; then
       DEL_OK=0
       DEL_FAIL=0
       while read -r MAP_KEY; do
+        ENCODED_KEY=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${MAP_KEY}'))" 2>/dev/null || echo "$MAP_KEY")
         DEL_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
           -u "${AUTH}" \
           -X DELETE \
-          "${MAP_STORAGE_URL}/${MAP_KEY}" 2>/dev/null || echo "000")
+          "${MAP_STORAGE_URL}/${ENCODED_KEY}" 2>/dev/null || echo "000")
 
         if [ "$DEL_CODE" = "200" ] || [ "$DEL_CODE" = "204" ]; then
           DEL_OK=$((DEL_OK + 1))
