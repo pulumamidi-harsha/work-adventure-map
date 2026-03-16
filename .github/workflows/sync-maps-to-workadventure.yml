@@ -1,0 +1,302 @@
+name: Sync Maps to WorkAdventure
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - '**/*.tmj'
+      - '**/*.json'
+  workflow_dispatch:
+    inputs:
+      sync_staging:
+        description: 'Sync to Staging environment'
+        required: true
+        type: boolean
+        default: false
+
+env:
+  GITHUB_PAGES_BASE_URL: https://pulumamidi-harsha.github.io/work-adventure-map
+  MAPSTORAGE_USER: ${{ secrets.MAPSTORAGE_USER }}
+  MAPSTORAGE_PASSWORD: ${{ secrets.MAPSTORAGE_PASSWORD }}
+
+jobs:
+  discover-maps:
+    name: Discover Maps
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.find-maps.outputs.maps }}
+      map-count: ${{ steps.find-maps.outputs.count }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Find all map files
+        id: find-maps
+        run: |
+          MAPS_JSON=$(find . -maxdepth 1 -name "*.tmj" -type f -exec basename {} \; | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          MAP_COUNT=$(echo "$MAPS_JSON" | jq 'length')
+          
+          echo "maps=$MAPS_JSON" >> $GITHUB_OUTPUT
+          echo "count=$MAP_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "Found $MAP_COUNT maps:"
+          echo "$MAPS_JSON" | jq -r '.[]'
+
+  sync-to-dev:
+    name: Sync to Dev Environment
+    runs-on: ubuntu-latest
+    needs: discover-maps
+    if: needs.discover-maps.outputs.map-count > 0
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Wait for GitHub Pages Deployment
+        run: |
+          echo "⏳ Waiting 5 minutes for GitHub Pages to fully deploy..."
+          echo "This ensures all maps are published before syncing to MapStorage"
+          sleep 300
+      
+      - name: Sync and cleanup maps in Dev
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
+        run: |
+          #!/bin/bash
+          set -e
+          
+          MAPSTORAGE_API_URL="https://workadventure.dev.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "🚀 WorkAdventure Map Sync - DEV"
+          echo "========================================="
+          
+          echo "📋 Fetching existing maps..."
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps" || echo '{"maps":{}}')
+          EXISTING_COUNT=$(echo "$EXISTING_MAPS" | jq '.maps | length')
+          echo "Found $EXISTING_COUNT existing maps in MapStorage"
+          echo ""
+          
+          # Build list of expected WAM files from repository
+          EXPECTED_WAMS=()
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              echo "$WAM_NAME" >> /tmp/expected_wams.txt
+          done
+          
+          # Delete maps that don't exist in repository
+          echo "🗑️  Checking for orphaned maps to delete..."
+          DELETE_COUNT=0
+          echo "$EXISTING_MAPS" | jq -r '.maps | keys[]' | while read -r EXISTING_WAM; do
+              if ! grep -q "^${EXISTING_WAM}$" /tmp/expected_wams.txt 2>/dev/null; then
+                  echo "   🗑️  Deleting orphaned map: $EXISTING_WAM"
+                  DELETE_RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X DELETE \
+                      "$MAPSTORAGE_API_URL/$EXISTING_WAM" \
+                      2>&1)
+                  
+                  if echo "$DELETE_RESPONSE" | grep -q "successfully deleted\|deleted successfully"; then
+                      echo "   ✅ Deleted successfully"
+                      DELETE_COUNT=$((DELETE_COUNT + 1))
+                  else
+                      echo "   ⚠️  Delete response: $DELETE_RESPONSE"
+                  fi
+              fi
+          done
+          echo ""
+          
+          # Sync current maps
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          echo "📤 Syncing current maps..."
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              
+              echo "📍 Processing: $MAP_FILE → $WAM_NAME"
+              
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "   ⏭️  SKIP: Already exists"
+                  SKIP_COUNT=$((SKIP_COUNT + 1))
+              else
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME" \
+                      2>&1)
+                  
+                  if echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "   ✅ SUCCESS"
+                      SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                  else
+                      echo "   ❌ ERROR: $RESPONSE"
+                      ERROR_COUNT=$((ERROR_COUNT + 1))
+                  fi
+              fi
+          done
+          
+          echo ""
+          echo "========================================="
+          echo "✨ Dev Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: $SUCCESS_COUNT"
+          echo "⏭️  Skipped: $SKIP_COUNT"
+          echo "❌ Errors: $ERROR_COUNT"
+          echo "🗑️  Deleted orphaned: $DELETE_COUNT"
+          echo ""
+          echo "🔗 View maps at: https://workadventure.dev.dso-os.int.bayer.com/map-storage/ui/maps"
+
+  sync-to-staging:
+    name: Sync to Staging Environment (Manual Only)
+    runs-on: ubuntu-latest
+    needs: [discover-maps, sync-to-dev]
+    if: github.event_name == 'workflow_dispatch' && inputs.sync_staging == true && needs.discover-maps.outputs.map-count > 0
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Sync and cleanup maps in Staging
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
+        run: |
+          #!/bin/bash
+          set -e
+          
+          MAPSTORAGE_API_URL="https://virtual-office.staging.dso-os.int.bayer.com/map-storage"
+          MAPSTORAGE_AUTH="$MAPSTORAGE_USER:$MAPSTORAGE_PASSWORD"
+          
+          echo "========================================="
+          echo "🚀 WorkAdventure Map Sync - STAGING"
+          echo "========================================="
+          
+          echo "📋 Fetching existing maps..."
+          EXISTING_MAPS=$(curl -s -u "$MAPSTORAGE_AUTH" "$MAPSTORAGE_API_URL/maps" || echo '{"maps":{}}')
+          EXISTING_COUNT=$(echo "$EXISTING_MAPS" | jq '.maps | length')
+          echo "Found $EXISTING_COUNT existing maps in MapStorage"
+          echo ""
+          
+          # Build list of expected WAM files from repository
+          EXPECTED_WAMS=()
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              echo "$WAM_NAME" >> /tmp/expected_wams_staging.txt
+          done
+          
+          # Delete maps that don't exist in repository
+          echo "🗑️  Checking for orphaned maps to delete..."
+          DELETE_COUNT=0
+          echo "$EXISTING_MAPS" | jq -r '.maps | keys[]' | while read -r EXISTING_WAM; do
+              if ! grep -q "^${EXISTING_WAM}$" /tmp/expected_wams_staging.txt 2>/dev/null; then
+                  echo "   🗑️  Deleting orphaned map: $EXISTING_WAM"
+                  DELETE_RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X DELETE \
+                      "$MAPSTORAGE_API_URL/$EXISTING_WAM" \
+                      2>&1)
+                  
+                  if echo "$DELETE_RESPONSE" | grep -q "successfully deleted\|deleted successfully"; then
+                      echo "   ✅ Deleted successfully"
+                      DELETE_COUNT=$((DELETE_COUNT + 1))
+                  else
+                      echo "   ⚠️  Delete response: $DELETE_RESPONSE"
+                  fi
+              fi
+          done
+          echo ""
+          
+          # Sync current maps
+          SUCCESS_COUNT=0
+          SKIP_COUNT=0
+          ERROR_COUNT=0
+          
+          echo "📤 Syncing current maps..."
+          echo "$MAPS" | jq -r '.[]' | while read -r MAP_FILE; do
+              WAM_NAME=$(echo "$MAP_FILE" | sed 's/ /-/g' | sed 's/[()]//g' | sed 's/&/and/g' | sed 's/.tmj$/.wam/')
+              MAP_URL="${GITHUB_PAGES_BASE_URL}/${MAP_FILE}"
+              
+              echo "📍 Processing: $MAP_FILE → $WAM_NAME"
+              
+              if echo "$EXISTING_MAPS" | jq -e ".maps.\"$WAM_NAME\"" > /dev/null 2>&1; then
+                  echo "   ⏭️  SKIP: Already exists"
+                  SKIP_COUNT=$((SKIP_COUNT + 1))
+              else
+                  WAM_CONTENT=$(cat <<EOF
+          {
+            "version": "1.0",
+            "mapUrl": "$MAP_URL",
+            "entities": {},
+            "areas": [],
+            "entityCollections": []
+          }
+          EOF
+          )
+                  
+                  RESPONSE=$(curl -s -u "$MAPSTORAGE_AUTH" \
+                      -X PUT \
+                      -H "Content-Type: application/json" \
+                      -d "$WAM_CONTENT" \
+                      "$MAPSTORAGE_API_URL/$WAM_NAME" \
+                      2>&1)
+                  
+                  if echo "$RESPONSE" | grep -q "successfully uploaded"; then
+                      echo "   ✅ SUCCESS"
+                      SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                  else
+                      echo "   ❌ ERROR: $RESPONSE"
+                      ERROR_COUNT=$((ERROR_COUNT + 1))
+                  fi
+              fi
+          done
+          
+          echo ""
+          echo "========================================="
+          echo "✨ Staging Sync Complete!"
+          echo "========================================="
+          echo "✅ Successfully added: $SUCCESS_COUNT"
+          echo "⏭️  Skipped: $SKIP_COUNT"
+          echo "❌ Errors: $ERROR_COUNT"
+          echo "🗑️  Deleted orphaned: $DELETE_COUNT"
+          echo ""
+          echo "🔗 View maps at: https://virtual-office.staging.dso-os.int.bayer.com/map-storage/ui/maps"
+
+  notify-completion:
+    name: Notify Completion
+    runs-on: ubuntu-latest
+    needs: [discover-maps, sync-to-dev, sync-to-staging]
+    if: always()
+    
+    steps:
+      - name: Summary
+        run: |
+          echo "========================================="
+          echo "🎉 WorkAdventure Map Sync Complete"
+          echo "========================================="
+          echo "Total maps discovered: ${{ needs.discover-maps.outputs.map-count }}"
+          echo ""
+          echo "Dev Status: ${{ needs.sync-to-dev.result }}"
+          echo "Staging Status: ${{ needs.sync-to-staging.result }}"
+          echo ""
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ inputs.sync_staging }}" == "true" ]; then
+            echo "✅ Maps synced to both Dev and Staging"
+          else
+            echo "✅ Maps synced to Dev only"
+            echo "ℹ️  To sync to Staging, run this workflow manually with 'Sync to Staging' enabled"
+          fi
