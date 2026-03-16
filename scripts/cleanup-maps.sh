@@ -54,15 +54,21 @@ if [ -z "${MAP_STORAGE_URL:-}" ]; then
     echo "  1) dev      — virtual-office.dev.dso-os.int.bayer.com"
     echo "  2) staging  — virtual-office.staging.dso-os.int.bayer.com"
     echo "  3) prod     — virtual-office.dso-os.int.bayer.com"
-    echo "  4) custom   — enter your own URL"
+    echo "  4) dev      — workadventure.dev.dso-os.int.bayer.com"
+    echo "  5) staging  — workadventure.staging.dso-os.int.bayer.com"
+    echo "  6) prod     — workadventure.dso-os.int.bayer.com"
+    echo "  7) custom   — enter your own URL"
     echo ""
-    read -rp "Choice [1-4]: " ENV_CHOICE
+    read -rp "Choice [1-7]: " ENV_CHOICE
 
     case "$ENV_CHOICE" in
-      1) ENVIRONMENT="dev" ;;
-      2) ENVIRONMENT="staging" ;;
-      3) ENVIRONMENT="prod" ;;
-      4)
+      1) ENVIRONMENT="dev";     MAP_STORAGE_URL="https://virtual-office.dev.dso-os.int.bayer.com/map-storage" ;;
+      2) ENVIRONMENT="staging"; MAP_STORAGE_URL="https://virtual-office.staging.dso-os.int.bayer.com/map-storage" ;;
+      3) ENVIRONMENT="prod";    MAP_STORAGE_URL="https://virtual-office.dso-os.int.bayer.com/map-storage" ;;
+      4) ENVIRONMENT="dev";     MAP_STORAGE_URL="https://workadventure.dev.dso-os.int.bayer.com/map-storage" ;;
+      5) ENVIRONMENT="staging"; MAP_STORAGE_URL="https://workadventure.staging.dso-os.int.bayer.com/map-storage" ;;
+      6) ENVIRONMENT="prod";    MAP_STORAGE_URL="https://workadventure.dso-os.int.bayer.com/map-storage" ;;
+      7)
         read -rp "Enter Map Storage URL (e.g. https://host/map-storage): " MAP_STORAGE_URL
         ENVIRONMENT="custom"
         ;;
