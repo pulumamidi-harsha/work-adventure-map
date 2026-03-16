@@ -140,20 +140,16 @@ jobs:
           echo "📊 Maps in dist/: $TMJ_COUNT"
           echo "📦 dist/ size: $TOTAL_SIZE"
 
-      # ── Create zip for upload ─────────────────────────────────
-      - name: Create zip — ${{ matrix.environment }}
-        run: |
-          cd dist
-          zip -r ../maps-${{ matrix.environment }}.zip .
-          cd ..
-          echo "📦 Zip created: maps-${{ matrix.environment }}.zip ($(du -sh maps-${{ matrix.environment }}.zip | cut -f1))"
-
       # ── Upload artifact ─────────────────────────────────────
+      # upload-artifact@v4 automatically zips the path into a
+      # downloadable .zip file. So we upload dist/ contents directly.
+      # When downloaded from the Actions UI, the .zip IS the map
+      # bundle — ready to upload to map-storage as-is.
       - name: Upload artifact — ${{ matrix.environment }}
         uses: actions/upload-artifact@v4
         with:
-          name: maps-${{ matrix.environment }}-${{ github.run_number }}
-          path: maps-${{ matrix.environment }}.zip
+          name: maps-${{ matrix.environment }}-${{ github.run_number }}.zip
+          path: dist/*
           retention-days: 30
 
       # ── Summary ─────────────────────────────────────────────
@@ -164,7 +160,7 @@ jobs:
           echo "========================================="
           echo "✅ Build complete — ${{ matrix.environment }}"
           echo "========================================="
-          echo "📦 Artifact: maps-${{ matrix.environment }}-${{ github.run_number }}"
+          echo "📦 Artifact: maps-${{ matrix.environment }}-${{ github.run_number }}.zip"
           echo "🌐 App domain: ${{ steps.env.outputs.app_domain }}"
           echo "📡 Map storage: ${{ steps.env.outputs.vo_domain }}"
           echo ""
@@ -176,7 +172,7 @@ jobs:
           echo ""
           echo "  Option 1 — Map Storage UI:"
           echo "    Open https://${{ steps.env.outputs.vo_domain }}/map-storage/ui"
-          echo "    Download artifact zip and upload it directly"
+          echo "    Download the artifact .zip — it's ready to upload directly"
           echo ""
           echo "  Option 2 — Local script (with network access):"
           echo "    ENVIRONMENT=${{ matrix.environment }} ./scripts/deploy-maps.sh"
@@ -190,7 +186,7 @@ jobs:
           | Environment | **${{ matrix.environment }}** |
           | App Domain | \`${{ steps.env.outputs.app_domain }}\` |
           | Map Storage | \`${{ steps.env.outputs.vo_domain }}\` |
-          | Artifact | \`maps-${{ matrix.environment }}-${{ github.run_number }}\` |
+          | Artifact | \`maps-${{ matrix.environment }}-${{ github.run_number }}.zip\` |
           | Commit | \`${{ github.sha }}\` |
 
           **Upload instructions:**
