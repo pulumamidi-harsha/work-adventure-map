@@ -5,3 +5,4 @@ artifacts/
 .env.secret
 *.log
 .DS_Store
+*.zip

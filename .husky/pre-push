@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# ─────────────────────────────────────────────────────────────
+# Pre-push hook: Verify the map build succeeds before push
+# If `npm run build` fails, the push is blocked.
+# ─────────────────────────────────────────────────────────────
+
+echo ""
+echo "🔨 Pre-push: Running build check..."
+echo ""
+
+npm run build
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ BUILD FAILED — push aborted."
+  echo "   Fix the build errors above, then try again."
+  echo ""
+  exit 1
+fi
+
+echo ""
+echo "✅ Build succeeded — proceeding with push."
+echo ""

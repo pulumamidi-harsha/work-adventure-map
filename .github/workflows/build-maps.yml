@@ -140,12 +140,20 @@ jobs:
           echo "📊 Maps in dist/: $TMJ_COUNT"
           echo "📦 dist/ size: $TOTAL_SIZE"
 
+      # ── Create zip for upload ─────────────────────────────────
+      - name: Create zip — ${{ matrix.environment }}
+        run: |
+          cd dist
+          zip -r ../maps-${{ matrix.environment }}.zip .
+          cd ..
+          echo "📦 Zip created: maps-${{ matrix.environment }}.zip ($(du -sh maps-${{ matrix.environment }}.zip | cut -f1))"
+
       # ── Upload artifact ─────────────────────────────────────
       - name: Upload artifact — ${{ matrix.environment }}
         uses: actions/upload-artifact@v4
         with:
           name: maps-${{ matrix.environment }}-${{ github.run_number }}
-          path: dist/
+          path: maps-${{ matrix.environment }}.zip
           retention-days: 30
 
       # ── Summary ─────────────────────────────────────────────
@@ -168,7 +176,7 @@ jobs:
           echo ""
           echo "  Option 1 — Map Storage UI:"
           echo "    Open https://${{ steps.env.outputs.vo_domain }}/map-storage/ui"
-          echo "    Download artifact and upload the zip"
+          echo "    Download artifact zip and upload it directly"
           echo ""
           echo "  Option 2 — Local script (with network access):"
           echo "    ENVIRONMENT=${{ matrix.environment }} ./scripts/deploy-maps.sh"
