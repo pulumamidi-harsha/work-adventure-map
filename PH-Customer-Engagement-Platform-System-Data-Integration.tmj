@@ -1199,7 +1199,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmkceerez00nn5q30kuqo6b1a"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmkceerez00nn5q30kuqo6b1a"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1226,7 +1226,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmk6kmakp00nnsniurev8r4ll"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmakp00nnsniurev8r4ll"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1253,7 +1253,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmk6kmakq00npsniumcspgk29"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmakq00npsniumcspgk29"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",

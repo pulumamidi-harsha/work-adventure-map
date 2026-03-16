@@ -1159,7 +1159,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1186,7 +1186,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",

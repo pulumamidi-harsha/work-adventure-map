@@ -1179,7 +1179,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/dso-os.staging.dso-os.int.bayer.com\/teams\/cmk6kmak000lpsniue3fpvdan"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmak000lpsniue3fpvdan"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
