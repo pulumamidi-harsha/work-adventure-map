@@ -281,7 +281,52 @@ Go to **Actions** → **Build Map Artifacts** → **Run workflow** → select `d
 
 ---
 
-## 🔒 Pre-commit / Pre-push Hooks
+## �️ PR Check — Build Validation (Branch Protection)
+
+Every Pull Request targeting `main` is validated by the **PR Check** workflow (`.github/workflows/pr-check.yml`). The PR **cannot be merged** until all checks pass.
+
+### What It Checks
+
+For **each environment** (dev, staging, prod) in parallel:
+
+| Step | What it does |
+|------|-------------|
+| 1. Domain replacement | Swaps `staging.dso-os.int.bayer.com` → target env domain in `.tmj` files |
+| 2. `npm ci` | Installs dependencies |
+| 3. TypeScript check | Runs `tsc` to catch type errors |
+| 4. `npm run build` | Full build (TypeScript + Vite tileset optimisation) |
+| 5. Verify `dist/` | Confirms `.tmj` files exist in `dist/`, counts maps, checks size |
+| 6. Zip test | Verifies a zip can be created from `dist/` |
+
+### Required Status Checks
+
+To enforce that PRs can't be merged without passing builds, enable branch protection:
+
+1. Go to **Repo Settings** → **Branches** → **Branch protection rules**
+2. Click **Add rule** for branch `main`
+3. Enable **Require status checks to pass before merging**
+4. Search and add these required checks:
+   - `Build Check — dev`
+   - `Build Check — staging`
+   - `Build Check — prod`
+5. Enable **Require branches to be up to date before merging**
+6. Save
+
+### PR Workflow
+
+```
+Developer creates PR → PR Check runs automatically
+                        ├── Build Check — dev      ✅ / ❌
+                        ├── Build Check — staging   ✅ / ❌
+                        └── Build Check — prod      ✅ / ❌
+
+All 3 pass? → Merge allowed ✅
+Any fails?  → Merge blocked ❌ (fix and push again)
+```
+
+---
+
+## �🔒 Pre-commit / Pre-push Hooks
 
 This repo uses [Husky](https://typicode.github.io/husky/) to run build checks before commits and pushes.
 

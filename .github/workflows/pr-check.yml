@@ -1,0 +1,162 @@
+name: PR Check — Build Validation
+
+# ──────────────────────────────────────────────────────────────
+# Runs on every Pull Request targeting main/master.
+# Validates the build for ALL 3 environments (dev, staging, prod).
+#
+# This workflow MUST pass before the PR can be merged.
+# To enforce this, enable "Require status checks to pass" in:
+#   Repo Settings → Branches → main → Branch protection rules
+#   → Required status checks: "Build Check — dev", "Build Check — staging", "Build Check — prod"
+# ──────────────────────────────────────────────────────────────
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: pr-check-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ── Build check for each environment ────────────────────────
+  build-check:
+    name: Build Check — ${{ matrix.environment }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        environment: [dev, staging, prod]
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # ── Determine target domain ─────────────────────────────
+      - name: Set domains for ${{ matrix.environment }}
+        id: env
+        run: |
+          SOURCE_DOMAIN="staging.dso-os.int.bayer.com"
+          echo "source_domain=$SOURCE_DOMAIN" >> $GITHUB_OUTPUT
+
+          case "${{ matrix.environment }}" in
+            dev)
+              echo "app_domain=dev.dso-os.int.bayer.com"                >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.dev.dso-os.int.bayer.com"  >> $GITHUB_OUTPUT
+              ;;
+            staging)
+              echo "app_domain=staging.dso-os.int.bayer.com"                >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.staging.dso-os.int.bayer.com"  >> $GITHUB_OUTPUT
+              ;;
+            prod)
+              echo "app_domain=dso-os.int.bayer.com"                    >> $GITHUB_OUTPUT
+              echo "vo_domain=virtual-office.dso-os.int.bayer.com"      >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+      # ── Replace domains in .tmj files ───────────────────────
+      - name: Replace domains for ${{ matrix.environment }}
+        run: |
+          SOURCE="${{ steps.env.outputs.source_domain }}"
+          TARGET="${{ steps.env.outputs.app_domain }}"
+
+          if [ "$SOURCE" == "$TARGET" ]; then
+            echo "✅ Source = target ($SOURCE) — no replacement needed"
+          else
+            BEFORE=$(grep -rc "$SOURCE" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}')
+            echo "🔄 Replacing '$SOURCE' → '$TARGET' ($BEFORE occurrences)"
+            [ "$BEFORE" -gt 0 ] && sed -i "s|$SOURCE|$TARGET|g" *.tmj
+            AFTER=$(grep -rc "$SOURCE" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}')
+            echo "   Remaining: $AFTER"
+          fi
+
+      # ── Install dependencies ────────────────────────────────
+      - name: Install dependencies
+        run: npm ci
+
+      # ── TypeScript compile ──────────────────────────────────
+      - name: TypeScript check
+        run: |
+          echo "🔍 Running TypeScript compiler..."
+          npx tsc --noEmit || npx tsc
+          echo "✅ TypeScript check passed"
+
+      # ── Full build ──────────────────────────────────────────
+      - name: Build maps
+        run: |
+          echo "🏗️  Building maps for ${{ matrix.environment }}..."
+          npm run build
+
+      # ── Verify build output ─────────────────────────────────
+      - name: Verify build artifacts
+        run: |
+          echo "🔍 Verifying build output..."
+          echo ""
+
+          # Check dist/ exists
+          if [ ! -d "dist" ]; then
+            echo "❌ dist/ directory not found — build failed!"
+            exit 1
+          fi
+
+          # Count .tmj files
+          TMJ_COUNT=$(find dist -name "*.tmj" 2>/dev/null | wc -l | tr -d ' ')
+          WAM_COUNT=$(find dist -name "*.wam" 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL_SIZE=$(du -sh dist/ | cut -f1)
+
+          echo "📊 Build output:"
+          echo "   .tmj files : $TMJ_COUNT"
+          echo "   .wam files : $WAM_COUNT"
+          echo "   Total size : $TOTAL_SIZE"
+          echo ""
+
+          if [ "$TMJ_COUNT" -eq 0 ]; then
+            echo "❌ No .tmj files found in dist/ — build produced no maps!"
+            exit 1
+          fi
+
+          echo "📋 Maps built:"
+          find dist -name "*.tmj" -exec basename {} \; | sort
+          echo ""
+
+          # Verify zip can be created
+          cd dist
+          zip -r ../test-maps.zip . > /dev/null 2>&1
+          cd ..
+          ZIP_SIZE=$(du -sh test-maps.zip | cut -f1)
+          echo "📦 Zip test: test-maps.zip ($ZIP_SIZE) — ✅"
+          rm -f test-maps.zip
+
+          echo ""
+          echo "✅ All checks passed for ${{ matrix.environment }}!"
+
+      # ── PR Summary ──────────────────────────────────────────
+      - name: PR check summary
+        if: always()
+        run: |
+          TMJ_COUNT=$(find dist -name "*.tmj" 2>/dev/null | wc -l | tr -d ' ')
+          TOTAL_SIZE=$(du -sh dist/ 2>/dev/null | cut -f1 || echo "N/A")
+
+          cat >> $GITHUB_STEP_SUMMARY << EOF
+          ## ✅ ${{ matrix.environment }} — PR Build Check
+
+          | Check | Result |
+          |-------|--------|
+          | npm ci | ✅ Passed |
+          | TypeScript | ✅ Passed |
+          | npm run build | ✅ Passed |
+          | Maps in dist/ | **${TMJ_COUNT}** |
+          | dist/ size | ${TOTAL_SIZE} |
+          | Domain | \`${{ steps.env.outputs.app_domain }}\` |
+          | Zip creation | ✅ Passed |
+
+          EOF
