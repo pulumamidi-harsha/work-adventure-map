@@ -1528,24 +1528,22 @@
                  "y":1000.15646666667
                 }, 
                 {
-                 "height":17.5104,
-                 "id":114,
+                 "height":16.1771,
+                 "id":167,
                  "name":"",
                  "rotation":0,
                  "text":
                     {
                      "fontfamily":"Pixelon",
-                     "halign":"center",
                      "pixelsize":9,
                      "text":"IT Summit 2026",
-                     "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":139.984666666666,
-                 "x":538,
-                 "y":1000.66666666667
+                 "width":79.318,
+                 "x":563.841,
+                 "y":1000.91145
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1598,7 +1596,7 @@
                  "y":992.5
                 }, 
                 {
-                 "height":31.6666666666665,
+                 "height":36.6666666666665,
                  "id":166,
                  "name":"toITSummit2026",
                  "properties":[
@@ -1610,9 +1608,48 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":49.775333333333,
-                 "x":430,
-                 "y":935
+                 "width":170.775333333333,
+                 "x":309,
+                 "y":932
+                }, 
+                {
+                 "gid":2687,
+                 "height":32,
+                 "id":169,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":480,
+                 "y":932
+                }, 
+                {
+                 "height":31.5546666666667,
+                 "id":168,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"https://static.885812045782.cloud.bayer.com/6a13e3ad-fa0b-4a3f-acee-e1af460a03e4/deq8p2ud/9wna8rro/preview/index.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsitePolicy",
+                         "type":"string",
+                         "value":"camera; microphone"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":false,
+                 "width":30,
+                 "x":450,
+                 "y":932
                 }, 
                 {
                  "height":31.6667,
@@ -2385,7 +2422,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":167,
+ "nextobjectid":170,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

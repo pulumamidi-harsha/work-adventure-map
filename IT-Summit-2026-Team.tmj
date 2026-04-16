@@ -1003,124 +1003,25 @@
                  "y":749.935469356076
                 }, 
                 {
-                 "height":24.8438,
-                 "id":50,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Microsoft Sans Serif",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room6",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":181.333,
-                 "x":1045.60721794076,
-                 "y":932.829469356076
-                }, 
-                {
-                 "height":26,
-                 "id":51,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Microsoft Sans Serif",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room4",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":180.667,
-                 "x":1333.62721794076,
-                 "y":933.495469356076
-                }, 
-                {
-                 "height":26.1771,
-                 "id":52,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Microsoft Sans Serif",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room1",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":180,
-                 "x":758.917217940758,
-                 "y":932.829469356076
-                }, 
-                {
                  "height":24.84,
                  "id":53,
                  "name":"",
                  "rotation":0,
                  "text":
                     {
-                     "fontfamily":"Microsoft Sans Serif",
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
                      "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room2",
+                     "pixelsize":14,
+                     "text":"Team 1",
                      "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
-                 "width":190,
-                 "x":1620.66721794076,
+                 "width":131.333333333333,
+                 "x":1643.33388460743,
                  "y":932.829469356076
-                }, 
-                {
-                 "height":24,
-                 "id":54,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Microsoft Sans Serif",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room3",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":180.667,
-                 "x":1333.55990618722,
-                 "y":451.169830514263
-                }, 
-                {
-                 "height":27.3333,
-                 "id":55,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Microsoft Sans Serif",
-                     "halign":"center",
-                     "pixelsize":10,
-                     "text":"Room4",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":181.333,
-                 "x":1622.10990618722,
-                 "y":449.169830514263
                 }, 
                 {
                  "height":18.8438,
@@ -1178,6 +1079,153 @@
                  "width":698.148470390058,
                  "x":1080.16578876245,
                  "y":675.579546305308
+                }, 
+                {
+                 "height":24.84,
+                 "id":61,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 2",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":1361.00016666667,
+                 "y":932.913333333333
+                }, 
+                {
+                 "height":24.84,
+                 "id":62,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 3",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":1071.66683333333,
+                 "y":932.913333333333
+                }, 
+                {
+                 "height":24.84,
+                 "id":63,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 4",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":783.666833333333,
+                 "y":931.58
+                }, 
+                {
+                 "height":24.84,
+                 "id":64,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 5",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":1643.66683333333,
+                 "y":452.913333333333
+                }, 
+                {
+                 "height":24.84,
+                 "id":65,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 6",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":1359.66683333333,
+                 "y":451.58
+                }, 
+                {
+                 "height":24.84,
+                 "id":66,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 7",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":1066.3335,
+                 "y":451.58
+                }, 
+                {
+                 "height":24.84,
+                 "id":67,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "fontfamily":"Chalkboard SE",
+                     "halign":"center",
+                     "pixelsize":14,
+                     "text":"Team 8",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":131.333,
+                 "x":778.3335,
+                 "y":451.58
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1299,7 +1347,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmads008asniullk34s4z"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzd2v7v00ozt101jk33v1mu"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1326,7 +1374,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmadt008csniu9eywgije"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzd2mca00p9sq013j45k9ml"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1353,7 +1401,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmadr0086sniub3plebiu"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzd2d7s00ott101e5f15z5a"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1380,7 +1428,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmadp0082snium790zc0l"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzborfy00j4t101hpagzinq"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1407,7 +1455,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmadq0084sniuz82h3r46"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnz37k0y00bwsq01mueg3l7n"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1434,7 +1482,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmk6kmads0088snius55o2fei"
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnz2cndm00crt1017ub2esiu"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
@@ -1490,7 +1538,63 @@
                  "width":96.964,
                  "x":2782.018,
                  "y":930.056
+                }, 
+                {
+                 "height":373.154,
+                 "id":68,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzd34ad00p5t101k4xuukio"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsitePolicy",
+                         "type":"string",
+                         "value":"camera; microphone"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":false,
+                 "width":272.063,
+                 "x":1036.9685,
+                 "y":75.423
+                }, 
+                {
+                 "height":373.154,
+                 "id":69,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"https:\/\/staging.dso-os.int.bayer.com\/teams\/cmnzd3dmz00pjsq01wpt957sk"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsitePolicy",
+                         "type":"string",
+                         "value":"camera; microphone"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":false,
+                 "width":272.063,
+                 "x":839.9685,
+                 "y":140.089666666667
                 }],
+         "offsetx":-88,
+         "offsety":-65.3333333333333,
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1498,7 +1602,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":60,
+ "nextobjectid":70,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
