@@ -1596,7 +1596,7 @@
                  "y":992.5
                 }, 
                 {
-                 "height":36.6666666666665,
+                 "height":70,
                  "id":166,
                  "name":"toITSummit2026",
                  "properties":[
@@ -1608,48 +1608,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":false,
-                 "width":170.775333333333,
-                 "x":309,
-                 "y":932
-                }, 
-                {
-                 "gid":2687,
-                 "height":32,
-                 "id":169,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":480,
-                 "y":932
-                }, 
-                {
-                 "height":31.5546666666667,
-                 "id":168,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"https://static.885812045782.cloud.bayer.com/6a13e3ad-fa0b-4a3f-acee-e1af460a03e4/deq8p2ud/9wna8rro/preview/index.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsitePolicy",
-                         "type":"string",
-                         "value":"camera; microphone"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":false,
-                 "width":30,
-                 "x":450,
-                 "y":932
+                 "width":171,
+                 "x":484,
+                 "y":953
                 }, 
                 {
                  "height":31.6667,
@@ -2331,90 +2292,9 @@
                  "width":140.775,
                  "x":50.1125,
                  "y":1631.16665
-                }, 
-                {
-                 "height":31.5546666666667,
-                 "id":162,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"https:\/\/static.885812045782.cloud.bayer.com\/6a13e3ad-fa0b-4a3f-acee-e1af460a03e4\/deq8p2ud\/9wna8rro\/preview\/index.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsitePolicy",
-                         "type":"string",
-                         "value":"camera; microphone"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":false,
-                 "width":96.964,
-                 "x":446.851333333333,
-                 "y":1792.38933333333
-                }, 
-                {
-                 "height":157.888,
-                 "id":163,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"https:\/\/static.885812045782.cloud.bayer.com\/6a13e3ad-fa0b-4a3f-acee-e1af460a03e4\/deq8p2ud\/9wna8rro\/preview\/index.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsitePolicy",
-                         "type":"string",
-                         "value":"camera; microphone"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":false,
-                 "width":96.964,
-                 "x":447.518,
-                 "y":0.0560000000000116
-                }, 
-                {
-                 "height":31.388,
-                 "id":165,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"https:\/\/www.youtube.com\/watch?v=TbZ_hTEOKZc"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsitePolicy",
-                         "type":"string",
-                         "value":"camera; microphone"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":31.4639999999999,
-                 "x":960.518,
-                 "y":32.056
                 }],
-         "offsetx":223,
-         "offsety":58,
+         "offsetx":49,
+         "offsety":19,
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
