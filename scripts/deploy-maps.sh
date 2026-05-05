@@ -58,6 +58,7 @@ echo ""
 
 # ── Domain mapping functions (bash 3.x compatible) ────────────
 SOURCE_DOMAIN="staging.dso-os.int.bayer.com"
+SOURCE_DIRECTORY_DOMAIN="d3fmrqmvjnwn6m.cloudfront.net"
 
 get_app_domain() {
   case "$1" in
@@ -72,6 +73,15 @@ get_vo_domain() {
     dev)     echo "virtual-office.dev.dso-os.int.bayer.com" ;;
     staging) echo "virtual-office.staging.dso-os.int.bayer.com" ;;
     prod)    echo "virtual-office.dso-os.int.bayer.com" ;;
+  esac
+}
+
+get_directory_domain() {
+  case "$1" in
+    dev)     echo "doizkviqkzeyt.cloudfront.net" ;;
+    staging) echo "d3fmrqmvjnwn6m.cloudfront.net" ;;
+    prod)    echo "d1ygxnweks0xtq.cloudfront.net" ;;
+    *)       echo "d3fmrqmvjnwn6m.cloudfront.net" ;;
   esac
 }
 
@@ -152,7 +162,7 @@ if [ "$SKIP_UPLOAD" != "true" ]; then
 fi
 
 # ═══════════════════════════════════════════════════════════════
-# STEP 1 — Replace domains in .tmj files
+# STEP 1 — Replace domains in .tmj files (automatic for all envs)
 # ═══════════════════════════════════════════════════════════════
 echo ""
 echo -e "${BOLD}━━━ Step 1: Replace domains in .tmj files ━━━${NC}"
@@ -160,24 +170,38 @@ echo -e "${BOLD}━━━ Step 1: Replace domains in .tmj files ━━━${NC}"
 TMJ_COUNT=$(ls *.tmj 2>/dev/null | wc -l | tr -d ' ')
 echo "   📄 Found ${TMJ_COUNT} .tmj files"
 
-if [ "$ENVIRONMENT" = "staging" ]; then
-  echo -e "   ✅ Source domain = target domain (${SOURCE_DOMAIN}) — no replacement needed"
-else
-  BEFORE=$(grep -c "${SOURCE_DOMAIN}" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}' || echo 0)
-  echo -e "   🔄 Replacing '${SOURCE_DOMAIN}' → '${TARGET_APP_DOMAIN}'"
-  echo -e "      Occurrences: ${BEFORE}"
+# Both Virtual Office and CloudFront Directory domains are replaced automatically.
+TARGET_DIRECTORY_DOMAIN="$(get_directory_domain "$ENVIRONMENT")"
+
+declare -a REPLACE_FROM=("${SOURCE_DOMAIN}" "${SOURCE_DIRECTORY_DOMAIN}")
+declare -a REPLACE_TO=("${TARGET_APP_DOMAIN}" "${TARGET_DIRECTORY_DOMAIN}")
+declare -a REPLACE_LABEL=("Virtual Office domain" "CloudFront Directory domain")
+
+TOTAL_REPLACED=0
+for i in 0 1; do
+  FROM="${REPLACE_FROM[$i]}"
+  TO="${REPLACE_TO[$i]}"
+  LABEL="${REPLACE_LABEL[$i]}"
+
+  if [ "$FROM" = "$TO" ]; then
+    echo -e "   ✅ ${LABEL}: source = target (${FROM}) — no replacement needed"
+    continue
+  fi
+
+  BEFORE=$(grep -c "${FROM}" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}' || echo 0)
+  echo -e "   🔄 ${LABEL}: '${FROM}' → '${TO}' (${BEFORE} occurrences)"
 
   if [ "$BEFORE" -gt 0 ]; then
     if [ "$(uname)" = "Darwin" ]; then
-      sed -i '' "s|${SOURCE_DOMAIN}|${TARGET_APP_DOMAIN}|g" *.tmj
+      sed -i '' "s|${FROM}|${TO}|g" *.tmj
     else
-      sed -i "s|${SOURCE_DOMAIN}|${TARGET_APP_DOMAIN}|g" *.tmj
+      sed -i "s|${FROM}|${TO}|g" *.tmj
     fi
+    TOTAL_REPLACED=$((TOTAL_REPLACED + BEFORE))
   fi
+done
 
-  AFTER=$(grep -c "${SOURCE_DOMAIN}" *.tmj 2>/dev/null | awk -F: '{sum+=$2} END{print sum+0}' || echo 0)
-  echo -e "      Remaining: ${AFTER}"
-fi
+echo -e "   📊 Total replacements: ${GREEN}${TOTAL_REPLACED}${NC}"
 
 # ═══════════════════════════════════════════════════════════════
 # STEP 2 — Install dependencies & Build
